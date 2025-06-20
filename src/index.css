@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=DIN+Neuzeit+Grotesk:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html,
-body {
- 
- box-sizing: border-box;
+body,
+#root {
+  font-family: 'DIN Neuzeit Grotesk', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

@@ -1,0 +1,65 @@
+.how-order-section {
+  padding: 3rem 0;
+  background: #ffffff;
+}
+.how-order-title {
+  color: #000000;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.04em;
+}
+.how-order-roadmap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.how-order-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+  margin: 0 0.5rem;
+}
+.how-order-icon {
+  background: #d3e6ce;
+  color: #fff;
+  font-size: 2.2rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(200, 100, 150, 0.08);
+}
+.how-order-label {
+  color: #333;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.01em;
+}
+.how-order-arrow {
+  font-size: 2rem;
+  color: #000000;
+  margin: 0 0.2rem;
+  align-self: center;
+}
+@media (max-width: 900px) {
+  .how-order-roadmap {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .how-order-arrow {
+    transform: rotate(90deg);
+    margin: 0.5rem 0;
+  }
+} 

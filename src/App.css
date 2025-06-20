@@ -1,8 +1,8 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background: #ffffff;
 }
 
 .logo {
@@ -39,4 +39,212 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Wholesaler Highlight Section Styles */
+.wholesaler-highlight-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  min-height: 70vh;
+  background: none;
+  margin: 60px 0 2rem 0;
+  box-shadow: none;
+  background: #d3e6ce;
+}
+
+.wholesaler-highlight-video-wrapper {
+  position: relative;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: visible;
+  height: 880px;
+  min-height: 400px;
+  z-index: 3;
+}
+
+.wholesaler-highlight-video {
+  width: 100%;
+  height: 100%;
+  max-height: 680px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: none;
+  background: #f8f8f8;
+  position: relative;
+  right: -70px; /* Overlap into the content area */
+  z-index: 3;
+  border: 15px solid #fff;
+
+}
+
+.wholesaler-highlight-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 3;
+}
+
+.wholesaler-highlight-box {
+  position: relative;
+  background: #f5f5f5;
+  border: 15px solid #fff;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  max-width: 440px;
+  margin-left: -60px; /* overlap effect */
+  z-index: 4;
+}
+
+.wholesaler-highlight-heading {
+  font-family: 'poppins';
+  font-size: 2.2rem;
+  font-weight: 200;
+  color: #232323;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.wholesaler-highlight-subheading {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.wholesaler-highlight-socials {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+  margin-left: 3rem;
+}
+
+.wholesaler-highlight-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #e6f0e6;
+  color: #222;
+  font-size: 1.3rem;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  text-decoration: none;
+}
+
+.wholesaler-highlight-social-btn:hover {
+  background: #b7d7b7;
+  color: #1a5e1a;
+}
+
+/* Decorative diagonal lines bottom left */
+.wholesaler-highlight-video::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40%;
+  height: 100px;
+  background: repeating-linear-gradient(
+    -30deg,
+    transparent,
+    transparent 8px,
+    #000000 8px,
+    #000000 10px
+  );
+  opacity: 0.8;
+  z-index: 5;
+}
+
+@media (max-width: 900px) {
+  .wholesaler-highlight-section {
+    grid-template-columns: 1fr;
+    min-height: 60vh;
+  }
+  .wholesaler-highlight-video-wrapper, .wholesaler-highlight-content {
+    width: 100%;
+    min-height: 220px;
+  }
+  .wholesaler-highlight-box {
+    margin-left: 0;
+    margin-top: -40px;
+    max-width: 98vw;
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+  .wholesaler-highlight-section::before {
+    left: 50%;
+    top: 0;
+    height: 100%;
+  }
+  .wholesaler-highlight-section::after {
+    width: 60%;
+    height: 40px;
+  }
+}
+
+/* Trending Accessories Section Styles */
+.trending-accessories-section {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+.trending-accessories-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #232323;
+}
+.trending-accessories-desc {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2.5rem;
+  font-size: 1.125rem;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.trending-accessories-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .trending-accessories-cards {
+    flex-direction: row;
+    padding: 0;
+  }
+}
+.trending-accessories-card {
+  padding: 1.5rem;
+  flex: 1;
+  max-width: 24rem;
+}
+.trending-accessories-img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.2rem;
+  margin-bottom: 1rem;
+}
+.trending-accessories-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.trending-accessories-card-desc {
+  color: #444;
+  margin-bottom: 1rem;
+}
+.trending-accessories-link {
+  color: #000;
+  font-weight: 600;
+  transition: color 0.2s;
 }
