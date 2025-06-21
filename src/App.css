@@ -1,11 +1,11 @@
-#root {
+/* #root {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   background: #ffffff;
-}
+} */
 
-.logo {
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -39,10 +39,10 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
 
 /* Wholesaler Highlight Section Styles */
-.wholesaler-highlight-section {
+/* .wholesaler-highlight-section {
   position: relative;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -74,7 +74,7 @@
   border: none;
   background: #f8f8f8;
   position: relative;
-  right: -70px; /* Overlap into the content area */
+  right: -70px; 
   z-index: 3;
   border: 15px solid #fff;
 
@@ -94,7 +94,7 @@
   border: 15px solid #fff;
   padding: 2.5rem 2.5rem 2rem 2.5rem;
   max-width: 440px;
-  margin-left: -60px; /* overlap effect */
+  margin-left: -60px; 
   z-index: 4;
 }
 
@@ -141,10 +141,10 @@
 .wholesaler-highlight-social-btn:hover {
   background: #b7d7b7;
   color: #1a5e1a;
-}
+} */
 
 /* Decorative diagonal lines bottom left */
-.wholesaler-highlight-video::after {
+/* .wholesaler-highlight-video::after {
   content: '';
   position: absolute;
   left: 0;
@@ -186,7 +186,7 @@
     width: 60%;
     height: 40px;
   }
-}
+} */
 
 /* Trending Accessories Section Styles */
 .trending-accessories-section {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './HowToPlaceOrder.css';
+import './HowToPlace.css';
 
 const steps = [
   { label: 'Custom Design Inquiry', icon: '🔍' },
@@ -13,10 +13,12 @@ const steps = [
   { label: 'Dispatching of Goods', icon: '🚚' },
 ];
 
-const HowToPlaceOrder = () => {
+const HowToPlace = () => {
   return (
     <section className="how-order-section">
-      <h2 className="how-order-title">How to Place Order?</h2>
+     <h2 className="text-3xl font-semibold text-[#232323] text-center font-[poppins] mb-5">
+        How to Place an Order?
+      </h2>
       <div className="how-order-roadmap">
         {steps.map((step, idx) => (
           <React.Fragment key={step.label}>
@@ -34,4 +36,4 @@ const HowToPlaceOrder = () => {
   );
 };
 
-export default HowToPlaceOrder; 
+export default HowToPlace; 

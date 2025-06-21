@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+/* html,
 body,
 #root {
   font-family: 'DIN Neuzeit Grotesk', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
@@ -13,4 +13,17 @@ body,
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+} */
+
+body {
+  margin: 0 1rem; /* default for mobile */
+}
+
+
+
+@keyframes dropIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
