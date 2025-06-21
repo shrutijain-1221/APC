@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-     <BrowserRouter>
+     <BrowserRouter basename="/APC">
      <Navbar/>
      <Routes>
       <Route path='/' element={<Home/>}/>
