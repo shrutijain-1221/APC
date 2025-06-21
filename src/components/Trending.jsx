@@ -1,0 +1,59 @@
+import React from 'react';
+import hair from '../assets/hair.png'; // Replace with your actual path
+import jewelry from '../assets/fashion.png'; // Replace with your actual path
+import headband from '../assets/beaded.png'; // Replace with your actual path
+const trendingItems = [
+  {
+    id: 1,
+    title: 'Beaded Headbands',
+    description: 'Handcrafted headbands with intricate beadwork for elegant styling.',
+    image:headband, // Replace with your actual path
+  },
+  {
+    id: 2,
+    title: 'Fashion Jewelry',
+    description: 'Statement jewelry for every season and occasion.',
+    image: jewelry,
+  },
+  {
+    id: 3,
+    title: 'Hair Accessories',
+    description: 'Elegant clips, bands, and decorative pieces.',
+    image: hair
+  },
+];
+
+const TrendingSection = () => {
+  return (
+    <section className=" text-white py-10 px-4 sm:px-8">
+      
+      <h2 className="text-3xl font-semibold text-[#232323] text-center font-[poppins]  mb-5">Trending Now</h2>
+       <p className="text-center text-xl mb-10 text-[#666]">
+        Discover our most popular fashion accessories loved by customers worldwide
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {trendingItems.map((item, index) => (
+          <div
+            key={item.id}
+            className="bg-[#d3e6ce] rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-60 object-cover"
+            />
+            <div className="p-5 text-black text-center h-full">
+              <h3 className="text-xl font-semibold">{item.title}</h3>
+              <p className="text-md min-h-[3rem] mt-2 mb-4">{item.description}</p>
+<button className="bg-[#a3d9b1] text-white text-sm font-semibold px-5 py-2 rounded-md">
+  Trending {index + 1} <span className="ml-1 text-xl">→</span>
+</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default TrendingSection;
