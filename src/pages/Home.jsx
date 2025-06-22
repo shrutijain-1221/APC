@@ -6,6 +6,7 @@ import HowToPlace from '../components/HowToPlace';
 import TeamMembers from '../components/Team';
 import Team from '../components/Team';
 import TestimonalCarousel from '../components/TestimonalCarousel';
+import VideoCarousel from '../components/VideoCarousel';
 
 const Home = () => {
   
@@ -31,6 +32,7 @@ const Home = () => {
     
 <Team/>
 <TestimonalCarousel/>
+
    </>
   )
 }

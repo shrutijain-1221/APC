@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import sampleVideo from '../assets/5759073-uhd_3840_2160_30fps.mp4';
 import videoThumbnail from '../assets/sweeingImage.png';
 import Trending from '../components/Trending';
+import WhoWeAre from './WhoWeAre';
 
 const socialLinks = [
   { href: 'https://www.linkedin.com', icon: 'fab fa-linkedin-in', label: 'LinkedIn' },
@@ -112,7 +113,7 @@ const mobileVideoRef = useRef(null);
                 );
               })}
             </div>
-
+              
             <div className="flex gap-5 mt-5 items-center justify-center">
               {socialLinks.map((link) => (
                 <a
@@ -127,6 +128,9 @@ const mobileVideoRef = useRef(null);
                 </a>
               ))}
             </div>
+           <div className="absolute right-[-40%] top-1/2 transform -translate-y-1/2 translate-x-1/2 w-64 h-96   flex items-center justify-center z-10">
+<WhoWeAre/>
+</div>
           </motion.div>
         </div>
       </div>
@@ -185,6 +189,10 @@ const mobileVideoRef = useRef(null);
         </motion.p>
       );
     })}
+  </div>
+  <div className='w-full flex items-center justify-center mt-4'>
+<WhoWeAre/>
+
   </div>
 </div>
 

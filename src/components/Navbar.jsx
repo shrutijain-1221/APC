@@ -15,7 +15,66 @@ const Navbar = () => {
       </div>
 <ul className='hidden md:flex gap-8 font-medium md:items-center'>
 <li><Link to="/appreal" className='hover:text-[#a3d9b1]'>Apprael</Link></li>
-<li><Link to="/accessories" className='hover:text-[#a3d9b1]'>Accessories</Link></li>
+<li className="relative group">
+  <Link to="/accessories" className="hover:text-[#a3d9b1]">Accessories</Link>
+
+  {/* Vertical Dropdown */}
+ <div className="absolute font-['Poppins'] top-full left-1/2 -translate-x-1/2 mt-2 bg-white shadow-lg border rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-[800px] p-8 flex  gap-6 text-lg">
+    
+    {/* Section 1: Hair Accessories */}
+    <div>
+      <h4 className="font-semibold text-md text-[#232323] mb-2">Hair Accessories</h4>
+      <ul className="space-y-1 pl-2">
+        <li><Link to="#">Headbands</Link></li>
+        <li><Link to="#">Scrunchies</Link></li>
+        <li><Link to="#">Alligator Bows</Link></li>
+        <li><Link to="#">Hair Clips/Pins</Link></li>
+        <li><Link to="#">Claw Clips</Link></li>
+        <li><Link to="#">Mickey Ears</Link></li>
+      </ul>
+    </div>
+
+    {/* Section 2: Jewelry & Small Accessories */}
+    <div>
+      <h4 className="font-semibold text-[#232323] mb-2">Jewelry & Small Accessories</h4>
+      <ul className="space-y-1 pl-2">
+        <li><Link to="#">Earrings</Link></li>
+        <li><Link to="#">Brooches</Link></li>
+        <li><Link to="#">Key Circle/Chains</Link></li>
+        <li><Link to="#">Wristlets</Link></li>
+        <li><Link to="#">Lanyards</Link></li>
+        <li><Link to="#">Handcuffs</Link></li>
+      </ul>
+    </div>
+
+    {/* Section 3: Bags & Storage */}
+    <div>
+      <h4 className="font-semibold text-[#232323] mb-2">Bags & Storage</h4>
+      <ul className="space-y-1 pl-2">
+        <li><Link to="#">Tote Bags</Link></li>
+        <li><Link to="#">Coin Purses</Link></li>
+        <li><Link to="#">Mobile Purses</Link></li>
+        <li><Link to="#">Clutches</Link></li>
+        <li><Link to="#">Box Bags</Link></li>
+        <li><Link to="#">Stadium Bag Straps</Link></li>
+      </ul>
+    </div>
+
+    {/* Section 4: Miscellaneous */}
+    <div>
+      <h4 className="font-semibold text-[#232323] mb-2">Miscellaneous</h4>
+      <ul className="space-y-1 pl-2">
+        <li><Link to="#">Eye Masks</Link></li>
+        <li><Link to="#">Coasters</Link></li>
+        <li><Link to="#">Trucker Hats</Link></li>
+        <li><Link to="#">Wreath Sash</Link></li>
+      </ul>
+    </div>
+    
+  </div>
+</li>
+
+
 <li><Link to="/trending" className='hover:text-[#a3d9b1]'>Trending</Link></li>
 <li><Link to="/aboutus" className='hover:text-[#a3d9b1]'>About us</Link></li>
 <li><Link to="/blogs" className='hover:text-[#a3d9b1]'>Blogs</Link></li>
