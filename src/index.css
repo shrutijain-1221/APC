@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DIN+Neuzeit+Grotesk:wght@400;700&display=swap');
-
+@import url('/node_modules/slick-carousel/slick/slick.css');
+@import url('/node_modules/slick-carousel/slick/slick-theme.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 /* html,
 body,
 #root {
@@ -26,4 +26,13 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.slick-dots li button:before {
+  color: #333 !important; /* or any visible color */
+  font-size: 12px;         /* make them slightly larger */
+  opacity: 1 !important;   /* make them fully visible */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #000 !important;  /* active dot color */
 }
