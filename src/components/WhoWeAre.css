@@ -1,0 +1,61 @@
+/* .who-we-are-section {
+ background: linear-gradient(135deg, #A8AD88, #D7DDBB);
+  color: #555;
+  padding: 2rem 1rem;
+  text-align: center;
+} */
+/* 
+.who-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+   color: #444;    
+} */
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:0.5rem;
+}
+
+.stat-card {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-who {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  color: #444;
+}
+
+.count {
+  font-size: 1rem;
+  font-weight: bold;
+   color: #222; 
+}
+
+.desc {
+  font-size: 1rem;
+  margin-top: 0.1rem;
+  
+  color: #666;  
+
+}
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.rotating {
+  animation: rotate 1.2s linear infinite;
+}
+
+.icon-who {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}

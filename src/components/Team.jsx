@@ -73,41 +73,39 @@ const Card = ({ member }) => (
 const Team = () => {
   return (
     <div className="flex justify-center p-4">
-      <div className="md:w-[80%] w-[90%] h-full md:h-[700px] bg-[#ddfae7] p-6 rounded-lg">
-        {/* Responsive Layout */}
+      <div className="md:w-[96%] w-[90%] h-full md:h-[350px] bg-[#ddfae7] p-6 rounded-lg">
         <div className="flex flex-col md:grid md:grid-cols-4 gap-6">
           
-          {/* Text + Button (first 2 columns in desktop, first item in mobile) */}
-          <div className="md:col-span-2 order-1 flex flex-col justify-center items-center ">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4 font-[Poppins] text-center ">
+          {/* Heading & Button (Visible on md and up) */}
+          <div className="md:col-span-2 order-1 flex flex-col justify-center items-center">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 font-[Poppins] text-center">
               People Loved <br className="hidden md:block" /> Our Team
             </h2>
-            <div className="flex  justify-center items-center ">
+
+            {/* Button only visible on md and up */}
+            <div className="hidden md:flex justify-center items-center">
               <button className="bg-[#a3d9b1] text-md font-semibold px-6 py-3 rounded-md text-white hover:bg-[#8ed0a4] transition-all mt-2">
                 See All Members
               </button>
             </div>
           </div>
 
-          {/* First 2 cards (next 2 columns in first row desktop, stack in mobile) */}
+          {/* First 2 Cards */}
           {team.slice(0, 2).map((member, idx) => (
             <div key={idx} className="order-2 flex justify-center">
               <Card member={member} />
             </div>
           ))}
 
-          {/* Rest of cards (next row desktop, stack in mobile) */}
-          {team.slice(2).map((member, idx) => (
-            <div key={idx} className="order-3 flex justify-center">
-              <Card member={member} />
-            </div>
-          ))}
-
-          {/* On mobile: move button below cards again if needed (optional duplicate for full control) */}
+          {/* Button for mobile only (below cards) */}
+          <div className="flex md:hidden justify-center items-center order-3 mt-4">
+            <button className="bg-[#a3d9b1] text-md font-semibold px-6 py-3 rounded-md text-white hover:bg-[#8ed0a4] transition-all">
+              See All Members
+            </button>
+          </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default Team;

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import VideoCarousel from "./VideoCarousel";
 
 const seasons = [
   { name: "Valentine's Day", image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" },
@@ -83,75 +84,8 @@ const ShopBySeason = () => {
       <p className="text-center text-xl mb-10 text-[#666]">
         One stop for all your fashion accessory needs, no matter the season or occasion.
       </p>
-
-      <div className="flex justify-center">
-        {!isMobile ? (
-          <div
-            ref={desktopRef}
-            className="relative bg-[#ddfae7] rounded-xl"
-            style={{ width: `${containerWidth}px`, height: `${containerHeight}px` }}
-          >
-            {/* Center Text */}
-            <div
-              className="absolute text-center text-[#666] font-[Poppins] text-2xl leading-snug"
-              style={{
-                top: `${centerY / 2 + 110}px`,
-                left: "50%",
-                transform: "translateX(-50%)",
-                width: "80%",
-              }}
-            >
-              Find perfect accessories for every<br /> celebration and season
-            </div>
-
-            {/* Semicircle Items */}
-            {seasons.map((season, i) => {
-              const angle = Math.PI * (i / (total - 1));
-              const x = centerX + radius * Math.cos(angle);
-              const y = centerY - radius * Math.sin(angle);
-              return (
-                <motion.div
-                  key={i}
-                  custom={i}
-                  initial="hidden"
-                  animate={controlsDesktop}
-                  variants={desktopVariants}
-                  className="absolute transform -translate-x-1/2 -translate-y-1/2 text-center"
-                  style={{ left: `${x}px`, top: `${y}px` }}
-                >
-                  <div className="w-24 h-24 rounded-full overflow-hidden shadow-md border-2 border-white mx-auto cursor-pointer hover:scale-105 transition-transform duration-300">
-                    <img src={season.image} alt={season.name} className="w-full h-full object-cover" />
-                  </div>
-                  <p className="text-xs text-gray-700 font-medium mt-1 w-24 mx-auto">{season.name}</p>
-                </motion.div>
-              );
-            })}
-          </div>
-        ) : (
-          <motion.div
-            ref={mobileRef}
-            initial="hidden"
-            animate={controlsMobile}
-            className="bg-[#ddfae7] rounded-xl w-full max-w-[500px] px-4 py-6"
-          >
-            <div className="grid grid-cols-3 gap-4">
-              {seasons.map((season, i) => (
-                <motion.div
-                  key={i}
-                  custom={i}
-                  variants={mobileVariants}
-                  className="text-center"
-                >
-                  <div className="w-20 h-20 rounded-full overflow-hidden shadow-md border-2 border-white mx-auto cursor-pointer hover:scale-105 transition-transform duration-300">
-                    <img src={season.image} alt={season.name} className="w-full h-full object-cover" />
-                  </div>
-                  <p className="text-[10px] text-gray-700 font-medium mt-1 w-20 mx-auto">{season.name}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </div>
+<VideoCarousel/>
+    
     </div>
   );
 };
