@@ -8,7 +8,7 @@ const Navbar = () => {
     const toggleMenu=()=>setMenuOpen((prev)=>!prev)
   return (
    <>
-   <div className='fixed top-0 left-0 z-50 w-full h-[80px]  bg-white shadow-md  px-20 md:px-32'>
+   <div className='fixed top-0 left-0 z-50 w-full h-[80px]  bg-white px-20 md:px-32'>
     <div className='flex items-center justify-between w-full h-full'>
       <div className="">
         <img src={logo} alt="Logo" className="h-16" />
@@ -78,7 +78,6 @@ const Navbar = () => {
 <li><Link to="/trending" className='hover:text-[#a3d9b1]'>Trending</Link></li>
 <li><Link to="/aboutus" className='hover:text-[#a3d9b1]'>About us</Link></li>
 <li><Link to="/blogs" className='hover:text-[#a3d9b1]'>Blogs</Link></li>
-<li><Link to="/testimonals" className='hover:text-[#a3d9b1]'>Testimonal</Link></li>
 <Link className='bg-[#a3d9b1] px-5 py-2 rounded-md text-white'>Book an Appointment</Link>
 </ul>
    <div className='md:hidden text-3xl cursor-pointer'>

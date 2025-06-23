@@ -1,6 +1,6 @@
 .how-order-section {
   padding: 3rem 0;
-  background: #ffffff;
+  background: #000000;
 }
 .how-order-title {
   color: #000000;
@@ -28,7 +28,7 @@
 }
 .how-order-icon {
   background: #d3e6ce;
-  color: #fff;
+  color: #000000;
   font-size: 2.2rem;
   width: 3.2rem;
   height: 3.2rem;
@@ -64,3 +64,21 @@
     margin: 0.5rem 0;
   }
 } 
+.arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Rotate arrow for mobile screens */
+@media (max-width: 768px) {
+  .arrow-container {
+    transform: rotate(90deg);
+    margin: 1rem 0;
+  }
+
+  .arrow-video {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}

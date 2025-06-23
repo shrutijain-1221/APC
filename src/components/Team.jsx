@@ -47,7 +47,7 @@ const team = [
 ];
 
 const Card = ({ member }) => (
-  <div className="relative w-[250px] h-[300px] rounded-lg overflow-hidden shadow-md group">
+  <div className="relative w-[350px] h-[400px] rounded-lg overflow-hidden shadow-md group">
     <img
       src={member.image}
       alt={member.name}
@@ -72,8 +72,8 @@ const Card = ({ member }) => (
 
 const Team = () => {
   return (
-    <div className="flex justify-center p-4">
-      <div className="md:w-[96%] w-[90%] h-full md:h-[350px] bg-[#ddfae7] p-6 rounded-lg">
+    <div className="flex justify-center">
+      <div className="md:w-[100%] w-[100%] h-full md:h-[450px] bg-[#ddfae7] p-6 ">
         <div className="flex flex-col md:grid md:grid-cols-4 gap-6">
           
           {/* Heading & Button (Visible on md and up) */}

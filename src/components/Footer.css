@@ -1,6 +1,5 @@
 .footer-section {
   background: white;
-  padding: 2.5rem 0 1rem 0;
   color: #23232b;
   font-size: 1rem;
 }
@@ -8,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto 1.5rem auto;
   gap: 2rem;
   flex-wrap: wrap;
