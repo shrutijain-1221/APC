@@ -68,12 +68,14 @@ const WhoWeAre = () => {
 
       <div className="stats-container">
         {stats.map((item, i) => (
-          <div className="stat-card" key={i}>
-            <div className={`icon-who ${isCounting[i] ? 'rotating' : ''}`}>
+          <div className="">
+          <div className="stat-card " key={i}>
+            <div className={` icon-who w-24 h-24 bg-white rounded-full shadow-md flex items-center justify-center ${isCounting[i] ? 'rotating' : ''}`}>
               {item.icon}
             </div>
             <div className="count">{counts[i]}{item.label}</div>
             <p className="desc">{item.desc}</p>
+          </div>
           </div>
         ))}
       </div>

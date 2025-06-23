@@ -6,6 +6,7 @@ import group from '../assets/group.jpeg';
 import sampleVideo from '../assets/5759073-uhd_3840_2160_30fps.mp4';
 import Slider from "react-slick";
 import sweepingImage from '../assets/sweeingImage.png'; 
+import ExhibitionsGallery from '../components/ExhibitionGallery';
 // Inside AboutUs component
 const teamImages = [
   sweepingImage,
@@ -205,6 +206,7 @@ const AboutUs = () => {
       </div>
     ))}
   </Slider>
+  <ExhibitionsGallery/>
 </div>
 
     </div>
