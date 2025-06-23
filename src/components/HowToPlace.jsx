@@ -1,16 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import customInquiryIcon from '../assets/srep1.png';
+import chatIcon from '../assets/srep2.png';
+import exploreIcon from '../assets/srep3.png';
+import orderIcon from '../assets/srep4.png';
+import depositIcon from '../assets/srep5.png';
+import sampleIcon from '../assets/srep6.png';
+import productionIcon from '../assets/srep7.png';
+import paymentIcon from '../assets/srep8.png';
+import shippingIcon from '../assets/srep9.png';
+import directionalArrow from '../assets/arrow.mp4'
 
 const steps = [
-  { label: 'Custom Design Inquiry', icon: '🔍' },
-  { label: 'Chat With Us', icon: '📞' },
-  { label: 'Explore Our Products', icon: '🛍️' },
-  { label: 'Place an Order', icon: '📝' },
-  { label: 'Deposit Token Amount', icon: '💰' },
-  { label: 'First Sample Approval', icon: '🛡️' },
-  { label: 'Production', icon: '🏭' },
-  { label: 'Pay the Balance', icon: '💳' },
-  { label: 'Dispatching of Goods', icon: '🚚' },
+  { label: 'Custom Design Inquiry', icon: customInquiryIcon },
+  { label: 'Chat With Us', icon: chatIcon },
+  { label: 'Explore Our Products', icon: exploreIcon },
+  { label: 'Place an Order', icon: orderIcon },
+  { label: 'Deposit Token Amount', icon: depositIcon },
+  { label: 'First Sample Approval', icon: sampleIcon },
+  { label: 'Production', icon: productionIcon },
+  { label: 'Pay the Balance', icon: paymentIcon },
+  { label: 'Dispatching of Goods', icon: shippingIcon },
 ];
 
 const HowToPlace = () => {
@@ -30,8 +40,8 @@ const HowToPlace = () => {
                 transition={{ duration: 0.6, delay }}
                 className="flex flex-col items-center min-w-[120px] mx-2"
               >
-                <div className="bg-[#d3e6ce] text-white text-3xl w-14 h-14 rounded-full flex items-center justify-center shadow-md mb-2">
-                  {step.icon}
+                <div className="bg-[#d3e6ce] text-white text-3xl w-22 h-22 rounded-full flex items-center justify-center mb-2">
+                  <img src={step.icon} alt={step.label} className="w-32 h-32 object-cover" />
                 </div>
                 <div className="text-center text-[#333] font-semibold text-base">
                   {step.label}
@@ -41,11 +51,18 @@ const HowToPlace = () => {
               {idx < steps.length - 1 && (
                 <motion.div
                   initial={{ opacity: 0, width: 0 }}
-                  animate={{ opacity: 1, width: '2rem' }}
+                  animate={{ opacity: 1, width: '8rem' }}
                   transition={{ duration: 0.4, delay: delay + 0.3 }}
                   className="text-2xl text-black mx-1 self-center"
                 >
-                  →
+                   <video
+                    src={directionalArrow}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-35 h-40"
+                  />
                 </motion.div>
               )}
             </React.Fragment>

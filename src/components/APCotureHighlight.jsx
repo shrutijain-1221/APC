@@ -51,14 +51,14 @@ const mobileVideoRef = useRef(null);
   return (
     <>
       {/* Desktop Layout */}
-      <div className="hidden md:grid mt-[100px] w-full bg-[#d3e6ce] min-h-[580px] grid-cols-2 relative overflow-hidden">
+      <div className="hidden md:grid mt-[100px] w-full bg-[#d3e6ce] min-h-[880px] grid-cols-2 relative overflow-hidden">
         {/* Left Column */}
         <div className="p-8 flex items-center justify-center bg-white relative z-10">
           <motion.div
             initial={{ opacity: 0, transform: 'translate(100%, -50%)' }}
             animate={{ opacity: 1, transform: 'translate(0%, -50%)' }}
             transition={{ duration: 1.2, ease: 'easeOut' }}
-            className="w-full h-[500px] absolute border-8 right-[-20%] top-1/2 z-20 shadow-lg overflow-hidden"
+            className="w-full h-[700px] absolute border-8 border-white right-[-20%] top-1/2 z-20 overflow-hidden"
           >
             <img
               src={videoThumbnail}

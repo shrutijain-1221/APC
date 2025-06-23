@@ -17,7 +17,7 @@ const teamImages = [
 ];
 const AboutUs = () => {
   return (
-   <div className="overflow-x-hidden py-10 px-4 sm:px-8 mt-28 max-w-6xl mx-auto">
+   <div className="overflow-x-hidden py-10 px-4 sm:px-8 mt-28 max-w-7xl mx-auto">
       <h2 className="text-3xl font-semibold text-[#232323] text-center font-[poppins] mb-3">
         About Us
       </h2>
@@ -34,18 +34,18 @@ const AboutUs = () => {
    initial={{ opacity: 0, x: 100 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 1 }}
-    className="w-full h-[550px] rounded-xl shadow-lg"
+    className="w-full h-[350px] shadow-lg"
   />
 </div>
       {/* Akansha Section */}
-      <div className="grid md:grid-cols-2 gap-10 items-center mb-20">
+      <div className="grid md:grid-cols-2 gap-28 items-center mb-20">
         <motion.img
           src={akanshaImg}
           alt="Akansha Piplani"
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          className="w-full rounded-xl shadow-lg"
+          className="w-full shadow-lg"
         />
         <div className="text-[#444] text-lg leading-relaxed">
           <h3 className="text-2xl font-semibold text-[#232323] mb-1">Akansha Piplani</h3>
@@ -61,7 +61,7 @@ const AboutUs = () => {
       </div>
 
       {/* Kamal Section */}
-      <div className="grid md:grid-cols-2 gap-10 items-center flex-col-reverse md:flex-row">
+      <div className="grid md:grid-cols-2 gap-28 items-center flex-col-reverse md:flex-row">
         <div className="text-[#444] text-lg leading-relaxed order-2 md:order-1">
           <h3 className="text-2xl font-semibold text-[#232323] mb-1">Kamal Piplani</h3>
           <p className="text-[#777] mb-4">Co-Founder & CEO</p>
@@ -79,7 +79,7 @@ const AboutUs = () => {
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          className="w-full rounded-xl shadow-lg h-[550px] order-1 md:order-2"
+          className="w-full shadow-lg h-[550px] order-1 md:order-2"
         />
       </div>
       {/* Video Section */}
@@ -93,10 +93,10 @@ const AboutUs = () => {
     initial={{ opacity: 0, scale: 0.95 }}
     whileInView={{ opacity: 1, scale: 1 }}
     transition={{ duration: 1 }}
-    className="rounded-xl overflow-hidden shadow-xl"
+    className="overflow-hidden shadow-xl"
   >
     <video
-      className="w-full h-auto rounded-xl"
+      className="w-full h-auto"
       src={sampleVideo}
       autoPlay
       muted
@@ -188,20 +188,19 @@ const AboutUs = () => {
   <Slider
     dots={true}
     infinite={true}
-    speed={500}
+    speed={1000}
     slidesToShow={1}
     slidesToScroll={1}
     autoplay={true}
     autoplaySpeed={3000}
     arrows={false}
-    className="rounded-xl "
   >
     {teamImages.map((src, index) => (
       <div key={index}>
         <img
           src={src}
           alt={`Team ${index + 1}`}
-          className="w-full h-[500px] object-cover rounded-xl"
+          className="w-full h-[500px] object-cover"
         />
       </div>
     ))}

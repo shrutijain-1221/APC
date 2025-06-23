@@ -31,11 +31,11 @@ const TrendingSection = () => {
        <p className="text-center text-xl mb-10 text-[#666]">
         Discover our most popular fashion accessories loved by customers worldwide
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
         {trendingItems.map((item, index) => (
           <div
             key={item.id}
-            className="bg-[#d3e6ce] rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+            className="bg-[#d3e6ce] overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
           >
             <img
               src={item.image}
