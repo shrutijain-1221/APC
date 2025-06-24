@@ -2,14 +2,16 @@ import React, { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import sampleVideo from '../assets/5759073-uhd_3840_2160_30fps.mp4';
 import videoThumbnail from '../assets/sweeingImage.png';
-import Trending from '../components/Trending';
 import WhoWeAre from './WhoWeAre';
-
+import linkdein from '../assets/linkdein.svg';
+import facebook from '../assets/facebook.svg';
+import instagram from '../assets/instagramicon.png';
+import baba from '../assets/BABA.svg'
 const socialLinks = [
-  { href: 'https://www.linkedin.com', icon: 'fab fa-linkedin-in', label: 'LinkedIn' },
-  { href: 'https://www.facebook.com', icon: 'fab fa-facebook-f', label: 'Facebook' },
-  { href: 'https://www.instagram.com', icon: 'fab fa-instagram', label: 'Instagram' },
-  { href: 'https://www.alibaba.com', icon: 'fas fa-globe', label: 'Alibaba' },
+  { href: 'https://www.linkedin.com/company/ap-curated-couture/', icon: linkdein, label: 'LinkedIn' },
+  { href: 'https://www.facebook.com/AkkiFashionista', icon: facebook, label: 'Facebook' },
+  { href: 'https://www.instagram.com/apcc.2018?igsh=bDBsYzI3aHE0Nnh6', icon: instagram, label: 'Instagram' },
+  { href: 'https://in19047554098tvzf.trustpass.alibaba.com/index.html', icon: baba, label: 'Alibaba' },
 ];
 
 const headingLines = [
@@ -51,14 +53,14 @@ const mobileVideoRef = useRef(null);
   return (
     <>
       {/* Desktop Layout */}
-      <div className="hidden md:grid mt-[100px] w-full bg-[#d3e6ce] min-h-[880px] grid-cols-2 relative overflow-hidden">
+      <div className="hidden md:grid mt-[100px] w-full bg-[#d3e6ce] min-h-[700px] grid-cols-2 relative overflow-hidden">
         {/* Left Column */}
         <div className="p-8 flex items-center justify-center bg-white relative z-10">
           <motion.div
             initial={{ opacity: 0, transform: 'translate(100%, -50%)' }}
             animate={{ opacity: 1, transform: 'translate(0%, -50%)' }}
             transition={{ duration: 1.2, ease: 'easeOut' }}
-            className="w-full h-[700px] absolute border-8 border-white right-[-20%] top-1/2 z-20 overflow-hidden"
+            className="w-[900px] h-[600px] absolute border-8 border-white right-[-20%] top-1/2 z-20 overflow-hidden"
           >
             <img
               src={videoThumbnail}
@@ -116,17 +118,21 @@ const mobileVideoRef = useRef(null);
               
             <div className="flex gap-5 mt-5 items-center justify-center">
               {socialLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={link.label}
-                  className="flex items-center justify-center w-10 h-10 rounded-full bg-[#e6f0e6] text-[#222] text-[1.3rem] shadow-md transition-all duration-200 hover:bg-[#b7d7b7] hover:text-[#1a5e1a]"
-                >
-                  <i className={link.icon}></i>
-                </a>
-              ))}
+  <div
+    key={link.label}
+    className="w-10 h-10 flex items-center justify-center rounded-full bg-[#e6f0e6]"
+    onClick={() => window.open(link.href, '_blank', 'noopener,noreferrer')}
+    role="button"
+    aria-label={link.label}
+    title={link.label}
+  >
+    <img
+      src={link.icon}
+      alt={link.label}
+      className="w-10 h-10 cursor-pointer"
+    />
+  </div>
+))}
             </div>
            <div className="absolute right-[-40%] top-1/2 transform -translate-y-1/2 translate-x-1/2 w-64 h-96   flex items-center justify-center z-10">
 <WhoWeAre/>

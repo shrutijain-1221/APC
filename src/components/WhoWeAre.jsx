@@ -1,17 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
-import { FaRocket, FaUsers, FaGlobe, FaBoxes } from "react-icons/fa";
 import './Whoweare.css';
 
 const stats = [
-  { icon: <FaRocket />, end: 6, label: "Years", desc: "Exporting Since" },
-  { icon: <FaUsers />, end: 5000, label: "+", desc: "Satisfied Clients" },
-  { icon: <FaGlobe />, end: 30, label: "+", desc: "Catering to Countries" },
-  { icon: <FaBoxes />, end: 30, label: "+", desc: "Product Range" },
+  { end: 6, label: "+", desc: "Years Exporting" },
+  { end: 5000, label: "+", desc: "Satisfied Clients" },
+  { end: 30, label: "+", desc: "Catering to Countries" },
+  { end: 30, label: "+", desc: "Product Range" },
 ];
 
 const WhoWeAre = () => {
   const [counts, setCounts] = useState(stats.map(() => 0));
-  const [isCounting, setIsCounting] = useState(stats.map(() => false));
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef(null);
 
@@ -37,23 +35,14 @@ const WhoWeAre = () => {
     stats.forEach((stat, i) => {
       let current = 0;
       const increment = Math.ceil(stat.end / 100);
-      setIsCounting(prev => {
-        const updated = [...prev];
-        updated[i] = true;
-        return updated;
-      });
 
       const interval = setInterval(() => {
         current += increment;
         if (current >= stat.end) {
           current = stat.end;
           clearInterval(interval);
-          setIsCounting(prev => {
-            const updated = [...prev];
-            updated[i] = false;
-            return updated;
-          });
         }
+
         setCounts(prev => {
           const updated = [...prev];
           updated[i] = current;
@@ -64,18 +53,14 @@ const WhoWeAre = () => {
   };
 
   return (
-    <section  ref={sectionRef}>
-
+    <section ref={sectionRef}>
       <div className="stats-container">
         {stats.map((item, i) => (
-          <div className="">
-          <div className="stat-card " key={i}>
-            <div className={` icon-who w-24 h-24 bg-white rounded-full shadow-md flex items-center justify-center ${isCounting[i] ? 'rotating' : ''}`}>
-              {item.icon}
+          <div className="stat-card bg-gray-200" key={i}>
+            <div className="count-box">
+              <div className="count">{counts[i]}{item.label}</div>
             </div>
-            <div className="count">{counts[i]}{item.label}</div>
             <p className="desc">{item.desc}</p>
-          </div>
           </div>
         ))}
       </div>

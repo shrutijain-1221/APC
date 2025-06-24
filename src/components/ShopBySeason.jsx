@@ -77,7 +77,7 @@ const ShopBySeason = () => {
   };
 
   return (
-    <div className="py-10 px-4 sm:px-8">
+    <div className="py-10">
       <h2 className="text-3xl font-semibold text-[#232323] text-center font-[poppins] mb-5">
         Shop By Season & Theme
       </h2>
