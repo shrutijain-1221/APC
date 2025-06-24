@@ -206,7 +206,7 @@ const AboutUs = () => {
       </div>
     ))}
   </Slider>
-  <ExhibitionsGallery/>
+  {/* <ExhibitionsGallery/> */}
 </div>
 
     </div>

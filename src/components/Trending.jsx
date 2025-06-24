@@ -25,7 +25,7 @@ const trendingItems = [
 
 const TrendingSection = () => {
   return (
-    <section className=" text-white py-10 px-4 sm:px-8">
+    <section className="bg-red-100 mt-1 text-white py-10  sm:px-8">
       
       <h2 className="text-3xl font-semibold text-[#232323] text-center font-[poppins]  mb-5">Trending Now</h2>
        <p className="text-center text-xl mb-10 text-[#666]">

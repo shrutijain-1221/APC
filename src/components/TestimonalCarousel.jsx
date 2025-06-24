@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
+import founder1 from "../assets/founder1.png";
 const cards = [
   { id: 1, title: " clicks don’t pay the bills—returns do. ROI ensures clarity..." },
   { id: 2, title: " clicks don’t pay the bills—returns do. ROI ensures clarity..." },
@@ -48,17 +48,17 @@ const TestimonalCarousel = () => {
   };
 
   return (
-    <div className="py-10 px-4 sm:px-8">
+    <div className="py-10 ">
       <h2 className="text-3xl font-semibold text-[#232323] text-center font-[poppins] mb-5">
-        Our Client Love Us
+       Gallery
       </h2>
 
       <div className="relative w-full flex items-center justify-center">
-        <div className="relative w-full max-w-6xl h-[400px] flex items-center justify-center overflow-hidden">
+        <div className="relative w-[100%] h-[450px]  bg-red-100 flex items-center justify-center overflow-hidden">
           {/* Left Arrow */}
           <button
             onClick={handlePrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-md z-50 hover:bg-gray-100"
+            className="absolute left-24 top-1/2 -translate-y-1/2 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-md z-50 hover:bg-gray-100"
           >
             {"<"}
           </button>
@@ -69,20 +69,15 @@ const TestimonalCarousel = () => {
             const zIndex = 10 - Math.abs(position);
             const translateX = isMobile ? 0 : position * 80;
 
-            const width = position === 0 ? "300px" : "250px";
+            const width = position === 0 ? "400px" : "300px";
             const height =
               position === 0
-                ? "300px"
+                ? "400px"
                 : position === -1 || position === 1
-                ? "250px"
-                : "210px";
+                ? "300px"
+                : "260px";
 
-            const textSize =
-              position === 0
-                ? "text-md"
-                : Math.abs(position) === 1
-                ? "text-sm"
-                : "text-xs";
+           
 
             const bgColor = position === 0
               ? (isMobile ? "bg-green-100" : "bg-gray-100")
@@ -104,9 +99,9 @@ const TestimonalCarousel = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className={`h-full w-full flex items-center justify-center text-center px-4 ${textSize}`}
+                  className={`h-full w-full flex items-center justify-center text-center px-4 `}
                 >
-                  {card.title}
+                 <img src={founder1} alt="Founder" className="w-full h-full object-cover" />
                 </motion.div>
               </motion.div>
             );
@@ -115,7 +110,7 @@ const TestimonalCarousel = () => {
           {/* Right Arrow */}
           <button
             onClick={handleNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-md z-50 hover:bg-gray-100"
+            className="absolute right-24 top-1/2 -translate-y-1/2 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-md z-50 hover:bg-gray-100"
           >
             {">"}
           </button>
