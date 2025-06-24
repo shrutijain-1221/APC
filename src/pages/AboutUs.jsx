@@ -7,6 +7,9 @@ import sampleVideo from '../assets/5759073-uhd_3840_2160_30fps.mp4';
 import Slider from "react-slick";
 import sweepingImage from '../assets/sweeingImage.png'; 
 import ExhibitionsGallery from '../components/ExhibitionGallery';
+import asso1 from '../assets/asso1.png';
+import asso2 from '../assets/asso2.png';
+import asso3 from '../assets/asso3.jpg';
 // Inside AboutUs component
 const teamImages = [
   sweepingImage,
@@ -18,7 +21,7 @@ const teamImages = [
 ];
 const AboutUs = () => {
   return (
-   <div className="overflow-x-hidden py-10 px-4 sm:px-8 mt-28 max-w-7xl mx-auto">
+   <div className="overflow-x-hidden py-10 px-4 sm:px-8 mt-28 mx-auto">
       <h2 className="text-3xl font-semibold text-[#232323] text-center font-[poppins] mb-3">
         About Us
       </h2>
@@ -38,51 +41,69 @@ const AboutUs = () => {
     className="w-full h-[350px] shadow-lg"
   />
 </div>
-      {/* Akansha Section */}
-      <div className="grid md:grid-cols-2 gap-28 items-center mb-20">
-        <motion.img
-          src={akanshaImg}
-          alt="Akansha Piplani"
-          initial={{ opacity: 0, scale: 0 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="w-full shadow-lg"
-        />
-        <div className="text-[#444] text-lg leading-relaxed">
-          <h3 className="text-2xl font-semibold text-[#232323] mb-1">Akansha Piplani</h3>
-          <p className="text-[#777] mb-4">Co-Founder & CEO</p>
-          <p>
-            A Fashion Designer and MBA in Marketing, <strong>Akansha Piplani</strong> transformed her 6 years of design experience into a global vision with the launch of <strong>AP Curated Couture</strong> in 2018. What began as a dream to create meaningful, trend-forward accessories soon evolved into a purpose-driven brand rooted in empowerment and craftsmanship. Today, her vision fuels a business that supports rural Indian artisans, especially women, while delivering handcrafted elegance to over 30+ countries. Her mission is to craft not just accessories, but confidence, culture, and conversation through every piece.
-          </p>
-          <ul className="mt-4 list-disc list-inside text-[#666]">
-            <li><strong>Projects Succeeded</strong> - 1K+</li>
-            <li><strong>Professional Experience</strong> - 6yrs+</li>
-          </ul>
-        </div>
-      </div>
+      
+<div className="grid md:grid-cols-2 gap-28 items-center mb-20">
+ 
+<motion.div
+    initial={{ opacity: 0, scale: 0 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1 }}
+    className="relative w-full "
+  >
+    <img
+      src={akanshaImg}
+      alt="Akansha Piplani"
+      className="w-[600px] h-[550px] object-cover "
+    />
+    {/* Overlay text on image */}
+    <div className="absolute bottom-4 left-4 bg-white/80 text-[#232323] text-sm sm:text-base p-3 rounded shadow-md">
+      <p><strong>Projects Succeeded</strong> - 1K+</p>
+      <p><strong>Professional Experience</strong> - 8yrs+</p>
+    </div>
+  </motion.div>
 
-      {/* Kamal Section */}
-      <div className="grid md:grid-cols-2 gap-28 items-center flex-col-reverse md:flex-row">
-        <div className="text-[#444] text-lg leading-relaxed order-2 md:order-1">
-          <h3 className="text-2xl font-semibold text-[#232323] mb-1">Kamal Piplani</h3>
-          <p className="text-[#777] mb-4">Co-Founder & CEO</p>
-          <p>
-            A BBA graduate from Symbiosis Pune and an MBA from IMT Ghaziabad, <strong>Kamal Piplani</strong> co-founded <strong>AP Curated Couture</strong> in 2018 alongside Akansha. With a sharp focus on business strategy, marketing, and international growth, he plays an instrumental role in scaling the brand globally. His structured mindset and entrepreneurial drive complement the creative spirit of the company, helping shape a brand that stands for quality, heritage, and purpose. Kamal continues to steer the business toward new markets, building on its strong foundation of values and vision.
-          </p>
-          <ul className="mt-4 list-disc list-inside text-[#666]">
-            <li><strong>Projects Succeeded</strong> - 1K+</li>
-            <li><strong>Professional Experience</strong> - 12yrs+</li>
-          </ul>
-        </div>
-        <motion.img
-          src={kamalImg}
-          alt="Kamal Piplani"
-          initial={{ opacity: 0, scale: 0 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="w-full shadow-lg h-[550px] order-1 md:order-2"
-        />
-      </div>
+  {/* Right side description */}
+  <div className="text-[#444] text-lg leading-relaxed">
+    <h3 className="text-2xl font-semibold text-[#232323] mb-1">Akansha Piplani</h3>
+    <p className="text-[#777] mb-4">Co-Founder & CEO</p>
+    <p>
+      A Fashion Designer and MBA in Marketing, <strong>Akansha Piplani</strong> transformed her 6 years of design experience into a global vision with the launch of <strong>AP Curated Couture</strong> in 2018. What began as a dream to create meaningful, trend-forward accessories soon evolved into a purpose-driven brand rooted in empowerment and craftsmanship. Today, her vision fuels a business that supports rural Indian artisans, especially women, while delivering handcrafted elegance to over 30+ countries. Her mission is to craft not just accessories, but confidence, culture, and conversation through every piece.
+    </p>
+   
+  </div>
+</div>
+
+{/* Kamal Section */}
+<div className="grid md:grid-cols-2 gap-28 items-center mb-20">
+  {/* Left text block */}
+  <div className="text-[#444] text-lg leading-relaxed order-2 md:order-1">
+    <h3 className="text-2xl font-semibold text-[#232323] mb-1">Kamal Piplani</h3>
+    <p className="text-[#777] mb-4">Co-Founder & CEO</p>
+    <p>
+      A BBA graduate from Symbiosis Pune and an MBA from IMT Ghaziabad, <strong>Kamal Piplani</strong> co-founded <strong>AP Curated Couture</strong> in 2018 alongside Akansha. With a sharp focus on business strategy, marketing, and international growth, he plays an instrumental role in scaling the brand globally. His structured mindset and entrepreneurial drive complement the creative spirit of the company, helping shape a brand that stands for quality, heritage, and purpose. Kamal continues to steer the business toward new markets, building on its strong foundation of values and vision.
+    </p>
+   
+  </div>
+
+  {/* Image with overlay */}
+<motion.div
+  initial={{ opacity: 0, scale: 0 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1 }}
+  className="relative w-full  order-1 md:order-2"
+>
+  <img
+    src={kamalImg}
+    alt="Kamal Piplani"
+    className="w-full h-[550px]"
+  />
+  <div className="absolute bottom-4 left-4 bg-white/80 text-[#232323] text-sm sm:text-base p-3 rounded shadow-md">
+    <p><strong>Projects Succeeded</strong> - 1K+</p>
+    <p><strong>Professional Experience</strong> - 12yrs+</p>
+  </div>
+</motion.div>
+</div>
+
       {/* Video Section */}
       {/* Video Section */}
 <div className="mt-20 px-4 sm:px-8">
@@ -97,7 +118,7 @@ const AboutUs = () => {
     className="overflow-hidden shadow-xl"
   >
     <video
-      className="w-full h-auto"
+      className="w-full h-[500px] object-cover"
       src={sampleVideo}
       autoPlay
       muted
@@ -109,7 +130,7 @@ const AboutUs = () => {
 </div>
 
 {/* Our Story Section */}
-<div className="mt-20 px-4 sm:px-8 max-w-6xl mx-auto">
+<div className="mt-20 ">
   <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#232323] mb-2">
     Our Story
   </h3>
@@ -181,7 +202,7 @@ const AboutUs = () => {
   </div>
 </div>
 {/* Team Image Carousel */}
-<div className="mt-20 px-4 sm:px-8 max-w-6xl mx-auto">
+<div className="mt-20   mx-auto">
   <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#232323] mb-6">
     Our Team Moments
   </h3>
@@ -208,6 +229,16 @@ const AboutUs = () => {
   </Slider>
   {/* <ExhibitionsGallery/> */}
 </div>
+<div className="mt-20 ">
+  <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#232323] mb-2">
+    Association
+  </h3>
+  <div className='flex justify-center gap-16 items-center mt-10'>
+<img src={asso1} alt='asso1' className='w-72 h-40 object-contain' />
+<img src={asso2} alt='asso2' className='w-72 h-40 object-contain' />
+<img src={asso3} alt='asso3' className='w-72 h-40 object-contain' />
+  </div>
+  </div>
 
     </div>
   );
