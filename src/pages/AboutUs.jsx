@@ -21,27 +21,33 @@ const teamImages = [
 ];
 const AboutUs = () => {
   return (
-   <div className="overflow-x-hidden py-10 px-4 sm:px-8 mt-28 mx-auto">
-      <h2 className="text-3xl font-semibold text-[#232323] text-center font-[poppins] mb-3">
-        About Us
-      </h2>
-      <p className="text-center text-xl mb-10 text-[#666]">
-        The People Who Make It Happen - Founders and Founders' Story
-      </p>
-<div className="mb-16">
-  <h3 className="text-2xl md:text-3xl font-semibold text-center mb-6 text-[#232323]">
+   <div className="overflow-x-hidden ">
+      
+<div className="mb-16 relative ">
+  {/* <h3 className="text-2xl md:text-3xl font-semibold text-center mb-6 text-[#232323]">
     Meet Our Team
-  </h3>
+  </h3> */}
+
   <motion.img
     src={group} 
     alt="Group of Employees"
    initial={{ opacity: 0, x: 100 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 1 }}
-    className="w-full h-[350px] shadow-lg"
+    className="w-full h-[550px] shadow-lg"
   />
+  <div className='inset-0 bg-black/50 absolute '>
+<div className="absolute bottom-32 left-32 w-full text-left">
+
+    <h2 className="text-6xl font-semibold text-white font-[poppins] mb-3">
+        About Us
+      </h2>
+      <p className=" text-2xl mb-10 text-white">
+        The People Who Make It Happen - Founders and Founders' Story
+      </p>
+  </div>
 </div>
-      
+   </div>   
 <div className="grid md:grid-cols-2 gap-28 items-center mb-20">
  
 <motion.div
@@ -233,7 +239,7 @@ const AboutUs = () => {
   <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#232323] mb-2">
     Association
   </h3>
-  <div className='flex justify-center gap-16 items-center mt-10'>
+  <div className='flex flex-col md:flex-row justify-center gap-16 items-center mt-10'>
 <img src={asso1} alt='asso1' className='w-72 h-40 object-contain' />
 <img src={asso2} alt='asso2' className='w-72 h-40 object-contain' />
 <img src={asso3} alt='asso3' className='w-72 h-40 object-contain' />
