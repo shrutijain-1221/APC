@@ -14,7 +14,7 @@ const videos = [
 
 const VideoCarousel = () => {
   return (
-    <div className="w-full bg-[#ddfae7] flex items-center justify-center h-[500px] py-6">
+    <div className="w-full  flex items-center justify-center h-[500px] py-6">
       <Marquee direction='right' gradient={false} speed={30} pauseOnHover={true}>
         {videos.map((src, index) => (
           <div key={index} className="mx-4 min-w-[200px]">
