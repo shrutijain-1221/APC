@@ -94,7 +94,7 @@ const Navbar = () => {
             <li><Link to="/trending" className='hover:text-[#a3d9b1]'>Trending</Link></li>
             <li><Link to="/aboutus" className='hover:text-[#a3d9b1]'>About us</Link></li>
             <li><Link to="/blogs" className='hover:text-[#a3d9b1]'>Blogs</Link></li>
-            <li><Link to="/blogs" className='hover:text-[#a3d9b1]'>Testimonals</Link></li>
+            <li><Link to="/testimonals" className='hover:text-[#a3d9b1]'>Testimonals</Link></li>
             <Link className='bg-[#a3d9b1] px-5 py-2 rounded-md text-white'>Book an Appointment</Link>
           </ul>
 

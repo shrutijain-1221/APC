@@ -54,7 +54,7 @@ const TestimonalCarousel = () => {
       </h2>
 
       <div className="relative w-full flex items-center justify-center">
-        <div className="relative w-[100%] h-[450px]  bg-red-100 flex items-center justify-center overflow-hidden">
+        <div className="relative w-[100%] h-[450px]  flex items-center justify-center overflow-hidden">
           {/* Left Arrow */}
           <button
             onClick={handlePrev}
