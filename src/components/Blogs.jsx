@@ -43,10 +43,10 @@ const BlogCard = ({ blog, delay, direction }) => {
       ref={ref}
       animate={controls}
       initial={{ opacity: 0, x: direction === 'left' ? -100 : 100 }}
-      className="bg-white rounded-xl shadow-lg overflow-hidden"
+      className="bg-white  shadow-lg overflow-hidden"
     >
-      <div className="rounded-lg shadow-lg overflow-hidden flex flex-col bg-white">
-  {/* Image + Hover Overlay */}
+      <div className=" shadow-lg overflow-hidden flex flex-col bg-white">
+
   <div className="relative h-[250px] group">
     <img
       src={blog.image}

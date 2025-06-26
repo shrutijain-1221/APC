@@ -5,21 +5,19 @@ const TestimonialCards = ({ content, image, name, role, reverse }) => {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
+ useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      setInView(entry.isIntersecting);
+    },
+    { threshold: 0.3 }
+  );
 
-    if (ref.current) observer.observe(ref.current);
-    return () => {
-      if (ref.current) observer.unobserve(ref.current);
-    };
-  }, []);
+  if (ref.current) observer.observe(ref.current);
+  return () => {
+    if (ref.current) observer.unobserve(ref.current);
+  };
+}, []);
 
   return (
     <div
@@ -38,7 +36,7 @@ const TestimonialCards = ({ content, image, name, role, reverse }) => {
         <img
           src={image}
           alt={name}
-          className="w-28 h-28 md:w-40 md:h-40 rounded-full object-cover shadow-lg border-4 border-white"
+          className="w-44 h-44 md:w-52 md:h-52 rounded-full object-cover shadow-lg  border-white"
         />
       </motion.div>
 
@@ -47,7 +45,7 @@ const TestimonialCards = ({ content, image, name, role, reverse }) => {
         initial={{ x: reverse ? -100 : 100, opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 0.6 }}
-        className="w-full md:w-2/3 bg-white shadow-md rounded-xl p-6 max-w-full"
+        className="w-full md:w-full    p-6 max-w-full bg-[#a3d9b1]/40 shadow-md   backdrop-blur-sm"
       >
         <p className="text-gray-700 text-base mb-4 whitespace-pre-line">{content}</p>
         <div className="text-sm text-gray-900 font-semibold">{name}</div>

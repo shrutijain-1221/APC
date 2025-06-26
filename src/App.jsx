@@ -8,6 +8,7 @@ import Products from './pages/Products'
 import Home from './pages/Home'
 import TestimonalsPage from './components/TestimonalsPage'
 import Blogs from './components/Blogs'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
      <BrowserRouter basename="/APC">
+      <ScrollToTop />
      <Navbar/>
      <Routes>
       <Route path='/' element={<Home/>}/>
