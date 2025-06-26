@@ -54,11 +54,11 @@ const TestimonalCarousel = () => {
       </h2>
 
       <div className="relative w-full flex items-center justify-center">
-        <div className="relative w-[100%] h-[450px]  flex items-center justify-center overflow-hidden">
+        <div className=" relative w-[100%] h-[450px]  flex items-center justify-center overflow-hidden">
           {/* Left Arrow */}
           <button
             onClick={handlePrev}
-            className="absolute left-24 top-1/2 -translate-y-1/2 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-md z-50 hover:bg-gray-100"
+            className=" absolute left-0 md:left-24 top-1/2 -translate-y-1/2 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-md z-50 hover:bg-gray-100"
           >
             {"<"}
           </button>
@@ -110,7 +110,7 @@ const TestimonalCarousel = () => {
           {/* Right Arrow */}
           <button
             onClick={handleNext}
-            className="absolute right-24 top-1/2 -translate-y-1/2 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-md z-50 hover:bg-gray-100"
+            className="absolute  right-0 md:right-24 top-1/2 -translate-y-1/2 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-md z-50 hover:bg-gray-100"
           >
             {">"}
           </button>
