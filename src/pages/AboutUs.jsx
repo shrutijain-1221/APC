@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import akanshaImg from '../assets/founder.png'; 
 import kamalImg from '../assets/founder1.png'; 
-import group from '../assets/group.jpeg'; 
+import group from '../assets/team_photo.png'; 
 import sampleVideo from '../assets/5759073-uhd_3840_2160_30fps.mp4';
 import Slider from "react-slick";
 import sweepingImage from '../assets/sweeingImage.png'; 
@@ -34,10 +34,10 @@ const AboutUs = () => {
    initial={{ opacity: 0, x: 100 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 1 }}
-    className="w-full h-[550px] shadow-lg"
+    className="w-full h-[350px] md:h-[550px] shadow-lg"
   />
   <div className='inset-0 bg-black/50 absolute '>
-<div className="absolute bottom-32 left-32 w-full text-left">
+<div className="absolute bottom-4 md:bottom-32 left-4 md:left-32 w-full text-left">
 
     <h2 className="text-6xl font-semibold text-white font-[poppins] mb-3">
         About Us
@@ -48,7 +48,10 @@ const AboutUs = () => {
   </div>
 </div>
    </div>   
-<div className="grid md:grid-cols-2 gap-28 items-center mb-20">
+   <h2 className="text-3xl font-semibold text-[#232323] text-center font-[poppins] mb-5">
+        Meet Our Founders
+      </h2>
+<div className="grid md:grid-cols-2 gap-28 items-center mb-20 px-10">
  
 <motion.div
     initial={{ opacity: 0, scale: 0 }}
@@ -59,7 +62,7 @@ const AboutUs = () => {
     <img
       src={akanshaImg}
       alt="Akansha Piplani"
-      className="w-[600px] h-[550px] object-cover "
+      className="w-[600px] h-[550px] object-cover object-right "
     />
     {/* Overlay text on image */}
     <div className="absolute bottom-4 left-4 bg-white/80 text-[#232323] text-sm sm:text-base p-3 rounded shadow-md">
@@ -70,27 +73,30 @@ const AboutUs = () => {
 
   {/* Right side description */}
   <div className="text-[#444] text-lg leading-relaxed">
-    <h3 className="text-2xl font-semibold text-[#232323] mb-1">Akansha Piplani</h3>
-    <p className="text-[#777] mb-4">Co-Founder & CEO</p>
-    <p>
-      A Fashion Designer and MBA in Marketing, <strong>Akansha Piplani</strong> transformed her 6 years of design experience into a global vision with the launch of <strong>AP Curated Couture</strong> in 2018. What began as a dream to create meaningful, trend-forward accessories soon evolved into a purpose-driven brand rooted in empowerment and craftsmanship. Today, her vision fuels a business that supports rural Indian artisans, especially women, while delivering handcrafted elegance to over 30+ countries. Her mission is to craft not just accessories, but confidence, culture, and conversation through every piece.
-    </p>
-   
-  </div>
+  <h3 className="text-2xl font-semibold text-[#232323] mb-1">Akansha Piplani</h3>
+  <p className="text-[#777] mb-4">Co-Founder & CEO</p>
+  <p className="mb-4">
+    Akansha Piplani is a Fashion Designer with an MBA in Marketing, whose passion for creativity and empowerment led to the founding of AP Curated Couture in 2018. With over six years of design expertise, she transformed her vision into a purpose-driven brand that supports rural Indian artisans, especially women.
+  </p>
+  <p className="mb-4">
+    Her mission goes beyond fashion—she aims to craft accessories that embody confidence, culture, and meaningful conversations. Under her leadership, AP Curated Couture has reached over 30+ countries, gaining recognition for its commitment to handcrafted excellence and social impact.
+  </p>
+</div>
 </div>
 
 {/* Kamal Section */}
-<div className="grid md:grid-cols-2 gap-28 items-center mb-20">
+<div className="grid md:grid-cols-2 gap-28 items-center mb-20 px-10">
   {/* Left text block */}
-  <div className="text-[#444] text-lg leading-relaxed order-2 md:order-1">
-    <h3 className="text-2xl font-semibold text-[#232323] mb-1">Kamal Piplani</h3>
-    <p className="text-[#777] mb-4">Co-Founder & CEO</p>
-    <p>
-      A BBA graduate from Symbiosis Pune and an MBA from IMT Ghaziabad, <strong>Kamal Piplani</strong> co-founded <strong>AP Curated Couture</strong> in 2018 alongside Akansha. With a sharp focus on business strategy, marketing, and international growth, he plays an instrumental role in scaling the brand globally. His structured mindset and entrepreneurial drive complement the creative spirit of the company, helping shape a brand that stands for quality, heritage, and purpose. Kamal continues to steer the business toward new markets, building on its strong foundation of values and vision.
-    </p>
-   
-  </div>
-
+ <div className="text-[#444] text-lg leading-relaxed order-2 md:order-1">
+  <h3 className="text-2xl font-semibold text-[#232323] mb-1">Kamal Piplani</h3>
+  <p className="text-[#777] mb-4">Co-Founder & CEO</p>
+  <p className="mb-4">
+    Kamal Piplani, a BBA graduate from Symbiosis and MBA from IMT Ghaziabad, co-founded AP Curated Couture in 2018 alongside Akansha. With a strategic mindset, he focuses on business growth, international expansion, and driving operational excellence for the brand.
+  </p>
+  <p className="mb-4">
+    His sharp business acumen complements the creative foundation of the company, helping scale it into a globally respected name in fashion accessories. Kamal continues to steer AP Curated Couture with a vision rooted in quality, purpose, and sustainable impact.
+  </p>
+</div>
   {/* Image with overlay */}
 <motion.div
   initial={{ opacity: 0, scale: 0 }}

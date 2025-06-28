@@ -9,6 +9,8 @@ import Home from './pages/Home'
 import TestimonalsPage from './components/TestimonalsPage'
 import Blogs from './components/Blogs'
 import ScrollToTop from './components/ScrollToTop'
+import AccessoryDetail from './pages/AccessoryDetail'
+import BlogDetail from './components/BlogDetail'
 
 function App() {
 
@@ -24,7 +26,8 @@ function App() {
       <Route path='/testimonals' element={<TestimonalsPage/>}/>
       <Route path='/products' element={<Products/>}/>
       <Route path='/blogs' element={<Blogs/>}/>
-       {/* <Route path="/accessories/:type" element={<AccessoryDetail />} />  */}
+       <Route path="/accessories/:type" element={<AccessoryDetail />} /> 
+       <Route path="/blog/:slug" element={<BlogDetail />} />
      </Routes>
      <Footer/>
      </BrowserRouter>

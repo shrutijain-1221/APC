@@ -1,49 +1,23 @@
 import React from 'react';
 import { FaLinkedin } from "react-icons/fa";
-
+import founderImg from '../assets/founder.png'; // Placeholder image, replace with actual founder image
+import founderImg2 from '../assets/founder1.png'; // Placeholder image, replace with actual second founder image
 const team = [
   {
-    name: 'Hardeep Singh',
-    role: 'Head - Business & Technology',
+    name: 'Kamal Piplani',
+    role: 'Co-Founder & CEO',
     email: 'hardeep@88gravity.com',
-    image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80',
+    image: founderImg2,
     linkedin: '#',
   },
   {
-    name: 'Jane Doe',
-    role: 'Marketing Lead',
+    name: 'Akansha Piplani',
+    role: 'Co-Founder & CEO',
     email: 'jane.doe@email.com',
-    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80',
+    image: founderImg,
     linkedin: '#',
   },
-  {
-    name: 'John Smith',
-    role: 'Operations Manager',
-    email: 'john.smith@email.com',
-    image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80',
-    linkedin: '#',
-  },
-  {
-    name: 'Priya Sharma',
-    role: 'Creative Director',
-    email: 'priya.sharma@email.com',
-    image: 'https://images.unsplash.com/photo-1454023492550-5696f8ff10e1?auto=format&fit=crop&w=600&q=80',
-    linkedin: '#',
-  },
-  {
-    name: 'Amit Patel',
-    role: 'Finance Head',
-    email: 'amit.patel@email.com',
-    image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80',
-    linkedin: '#',
-  },
-  {
-    name: 'Priya Sharma',
-    role: 'Creative Director',
-    email: 'priya.sharma@email.com',
-    image: 'https://images.unsplash.com/photo-1454023492550-5696f8ff10e1?auto=format&fit=crop&w=600&q=80',
-    linkedin: '#',
-  },
+
 ];
 
 const Card = ({ member }) => (
@@ -51,7 +25,7 @@ const Card = ({ member }) => (
     <img
       src={member.image}
       alt={member.name}
-      className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
+      className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105 object-top "
     />
     <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white px-4 text-center">
       <h3 className="text-xl font-bold mb-2">{member.name}</h3>

@@ -120,7 +120,7 @@ const mobileVideoRef = useRef(null);
               {socialLinks.map((link) => (
   <div
     key={link.label}
-    className="w-10 h-10 flex items-center justify-center rounded-full bg-[#e6f0e6]"
+    className="w-10 h-10 flex items-center justify-center rounded-full "
     onClick={() => window.open(link.href, '_blank', 'noopener,noreferrer')}
     role="button"
     aria-label={link.label}
