@@ -3,18 +3,19 @@ import { FaLinkedin } from "react-icons/fa";
 import founderImg from '../assets/founder.png'; // Placeholder image, replace with actual founder image
 import founderImg2 from '../assets/founder1.png'; // Placeholder image, replace with actual second founder image
 const team = [
-  {
-    name: 'Kamal Piplani',
-    role: 'Co-Founder & CEO',
-    email: 'hardeep@88gravity.com',
-    image: founderImg2,
-    linkedin: '#',
-  },
+ 
   {
     name: 'Akansha Piplani',
     role: 'Co-Founder & CEO',
     email: 'jane.doe@email.com',
     image: founderImg,
+    linkedin: '#',
+  },
+   {
+    name: 'Kamal Piplani',
+    role: 'Co-Founder & CEO',
+    email: 'hardeep@88gravity.com',
+    image: founderImg2,
     linkedin: '#',
   },
 

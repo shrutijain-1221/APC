@@ -36,7 +36,7 @@ const TestimonialCards = ({ content, image, name, role, reverse }) => {
         <img
           src={image}
           alt={name}
-          className="w-44 h-44 md:w-52 md:h-52 rounded-full object-cover shadow-lg  border-white"
+          className="w-44 h-44 md:w-72 md:h-72 rounded-full object-cover shadow-lg  border-white"
         />
       </motion.div>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import hair from '../assets/hair.png'; // Replace with your actual path
 import jewelry from '../assets/fashion.png'; // Replace with your actual path
 import headband from '../assets/beaded.png'; // Replace with your actual path
+import { NavLink } from 'react-router-dom';
 const trendingItems = [
   {
     id: 1,
@@ -52,6 +53,15 @@ const TrendingSection = () => {
           </div>
         ))}
       </div>
+       <div className='mt-10 flex justify-center'>
+        <NavLink
+                  to="/trending"
+                  onClick={() => setMenuOpen(false)}
+                  className="bg-[#a3d9b1] px-5 py-2 rounded-md text-white"
+                >
+                  See All Trending
+                </NavLink>
+       </div>
     </section>
   );
 };

@@ -34,7 +34,7 @@ const AboutUs = () => {
    initial={{ opacity: 0, x: 100 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 1 }}
-    className="w-full h-[350px] md:h-[550px] shadow-lg"
+    className="w-full h-[350px] md:h-full shadow-lg"
   />
   <div className='inset-0 bg-black/50 absolute '>
 <div className="absolute bottom-4 md:bottom-32 left-4 md:left-32 w-full text-left">
@@ -54,22 +54,31 @@ const AboutUs = () => {
 <div className="grid md:grid-cols-2 gap-28 items-center mb-20 px-10">
  
 <motion.div
-    initial={{ opacity: 0, scale: 0 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 1 }}
-    className="relative w-full "
-  >
+  initial={{ opacity: 0, scale: 0 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1 }}
+  className="relative flex justify-center w-full"
+>
+  <div className="relative">
     <img
       src={akanshaImg}
       alt="Akansha Piplani"
-      className="w-[600px] h-[550px] object-cover object-right "
+      className="w-[600px] h-[550px] object-cover object-right"
     />
-    {/* Overlay text on image */}
-    <div className="absolute bottom-4 left-4 bg-white/80 text-[#232323] text-sm sm:text-base p-3 rounded shadow-md">
-      <p><strong>Projects Succeeded</strong> - 1K+</p>
-      <p><strong>Professional Experience</strong> - 8yrs+</p>
+    {/* Overlay */}
+    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 transform flex ">
+      <div className="bg-red-600 text-white p-4 shadow-md w-32 text-center">
+        <p className="text-2xl font-bold">1K+</p>
+        <p className="text-sm">projects succeeded</p>
+      </div>
+      <div className="bg-[#1a1a1a] text-white p-4 shadow-md w-32 text-center">
+        <p className="text-2xl font-bold">8yrs+</p>
+        <p className="text-sm">of professional experience</p>
+      </div>
     </div>
-  </motion.div>
+  </div>
+</motion.div>
+
 
   {/* Right side description */}
   <div className="text-[#444] text-lg leading-relaxed">
@@ -107,42 +116,30 @@ const AboutUs = () => {
   <img
     src={kamalImg}
     alt="Kamal Piplani"
-    className="w-full h-[550px]"
+    className="w-full h-[550px] object-cover object-right object-top"
   />
-  <div className="absolute bottom-4 left-4 bg-white/80 text-[#232323] text-sm sm:text-base p-3 rounded shadow-md">
-    <p><strong>Projects Succeeded</strong> - 1K+</p>
-    <p><strong>Professional Experience</strong> - 12yrs+</p>
+ <div className="absolute bottom-4 left-4 flex left-1/2 transform -translate-x-1/2 ">
+  {/* Box 1 - Red */}
+  <div className="bg-red-600 text-white p-4  shadow-md w-32">
+    <p className="text-2xl font-bold">1K+</p>
+    <p className="text-sm">projects succeeded</p>
   </div>
+
+  {/* Box 2 - Dark (Black or Dark Gray) */}
+  <div className="bg-[#1a1a1a] text-white p-4  shadow-md w-32">
+    <p className="text-2xl font-bold">12yrs+</p>
+    <p className="text-sm">of professional experience</p>
+  </div>
+</div>
+
 </motion.div>
 </div>
 
       {/* Video Section */}
       {/* Video Section */}
-<div className="mt-20 px-4 sm:px-8">
-  <h3 className="text-2xl md:text-3xl font-semibold text-[#232323] text-center mb-6">
-    Our Journey
-  </h3>
-
-  <motion.div
-    initial={{ opacity: 0, scale: 0.95 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 1 }}
-    className="overflow-hidden shadow-xl"
-  >
-    <video
-      className="w-full h-[500px] object-cover"
-      src={sampleVideo}
-      autoPlay
-      muted
-      loop
-      playsInline
-      controls={false} 
-    />
-  </motion.div>
-</div>
-
 {/* Our Story Section */}
-<div className="mt-20 ">
+{/* Our Story Section */}
+<div className="mt-20 px-4 sm:px-8">
   <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#232323] mb-2">
     Our Story
   </h3>
@@ -150,69 +147,56 @@ const AboutUs = () => {
     AP Curated Couture – a legacy of design, detail & dedication in accessories
   </p>
 
-  {/* Paragraph Blocks */}
-  <div className="space-y-12">
-    {/* Block 1 */}
-    <motion.div
-      initial={{ opacity: 0, x: -100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
-      className="bg-white shadow-lg rounded-xl p-6 md:p-8 max-w-3xl"
-    >
-      <p className="text-[#444] text-lg leading-relaxed">
-        Our journey to becoming India’s top-rated and trending accessories manufacturer and exporter began in 2016, when our co-founder and creative director <strong>Akansha Piplani</strong> completed her post-graduation in fashion design. Early work with international fashion labels revealed an essential truth: a great design deserves a great manufacturer.
-      </p>
-    </motion.div>
+  <div className="flex flex-col md:flex-row gap-8 items-start">
+    {/* Left Image Slider */}
+    <div className="w-full md:w-1/2">
+      <Slider
+        dots={true}
+        infinite={true}
+        speed={1000}
+        slidesToShow={1}
+        slidesToScroll={1}
+        autoplay={true}
+        autoplaySpeed={3000}
+        arrows={false}
+      >
+        {teamImages.map((src, index) => (
+          <div key={index}>
+            <img
+              src={src}
+              alt={`Story Image ${index + 1}`}
+              className="w-full h-[500px] object-cover shadow-lg"
+            />
+          </div>
+        ))}
+      </Slider>
+    </div>
 
-    {/* Block 2 */}
+    {/* Right Single Content Block */}
     <motion.div
       initial={{ opacity: 0, x: 100 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
-      className="bg-white shadow-lg rounded-xl p-6 md:p-8 max-w-3xl ml-auto"
+      transition={{ duration: 1 }}
+      className="w-full md:w-1/2 bg-white shadow-xl p-6 md:p-5"
     >
-      <p className="text-[#444] text-lg leading-relaxed">
-        This insight led her to start a small-batch setup called <strong>AP Curated Couture®</strong> in 2018, with one mission: to honour every design through super-specialized production. The guiding principle was simple—whatever we make must be extraordinary.
-      </p>
-    </motion.div>
+      <p className="text-[#444] text-sm ">
+        Our journey to becoming India’s top-rated and trending accessories manufacturer and exporter began in 2016, when our co-founder and creative director <strong>Akansha Piplani</strong> completed her post-graduation in fashion design. Early work with international fashion labels revealed an essential truth: a great design deserves a great manufacturer.<br /><br />
 
-    {/* Block 3 */}
-    <motion.div
-      initial={{ opacity: 0, x: -100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
-      className="bg-white shadow-lg rounded-xl p-6 md:p-8 max-w-3xl"
-    >
-      <p className="text-[#444] text-lg leading-relaxed">
-        Building on this strong foundation, <strong>AP Curated Couture</strong> emerged as a brand for handcrafted fashion accessories. Born out of passion and bolstered by family support, the brand secured its first international order within just three months of starting its business.
-      </p>
-    </motion.div>
+        This insight led her to start a small-batch setup called <strong>AP Curated Couture®</strong> in 2018, with one mission: to honour every design through super-specialized production. The guiding principle was simple—whatever we make must be extraordinary.<br /><br />
 
-    {/* Block 4 */}
-    <motion.div
-      initial={{ opacity: 0, x: 100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
-      className="bg-white shadow-lg rounded-xl p-6 md:p-8 max-w-3xl ml-auto"
-    >
-      <p className="text-[#444] text-lg leading-relaxed">
-        <strong>AP Curated Couture®</strong> is a process-oriented, highly quality-conscious accessories manufacturer with great understanding of design technicality, colour code, cut & finish, tailoring, fabric selection and its relevance to your design and brand, printing techniques and outstanding hand-works which are essential for effective work on your custom design.
-      </p>
-    </motion.div>
+        Building on this strong foundation, <strong>AP Curated Couture</strong> emerged as a brand for handcrafted fashion accessories. Born out of passion and bolstered by family support, the brand secured its first international order within just three months of starting its business.<br /><br />
 
-    {/* Block 5 */}
-    <motion.div
-      initial={{ opacity: 0, x: -100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
-      className="bg-white shadow-lg rounded-xl p-6 md:p-8 max-w-3xl"
-    >
-      <p className="text-[#444] text-lg leading-relaxed">
+        <strong>AP Curated Couture®</strong> is a process-oriented, highly quality-conscious accessories manufacturer with great understanding of design technicality, colour code, cut & finish, tailoring, fabric selection and its relevance to your design and brand, printing techniques and outstanding hand-works which are essential for effective work on your custom design.<br /><br />
+
         We have dedicated ourselves to providing state-of-the-art, technology-equipped production factories in 3 rural areas to meet the fast-changing fashion industry line in accessories, with a capacity of producing more than <strong>50,000+ accessories monthly</strong>. Be it headbands, clutches, tote bags, bag straps, earrings, or any other product—we possess great know-how to surprise with our exquisite workmanship at the most affordable price in all lines of accessories!
       </p>
     </motion.div>
   </div>
 </div>
+
+
+
+
 {/* Team Image Carousel */}
 <div className="mt-20   mx-auto">
   <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#232323] mb-6">

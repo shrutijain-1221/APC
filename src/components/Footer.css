@@ -1,10 +1,11 @@
 .footer-section {
-  background: white;
+  background: #f8f8f8;
   color: #23232b;
   font-size: 1rem;
 }
 .footer-content {
   display: flex;
+  padding: 1rem;
   justify-content: space-between;
   align-items: flex-start;
   max-width: 1800px;

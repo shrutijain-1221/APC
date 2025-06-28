@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer-section">
+    <footer className="footer-section ">
       <div className="footer-content">
          <div className="map">
         <iframe
