@@ -23,7 +23,7 @@ const BlogDetail = () => {
 
   // Example API call to fetch blog by slug
   // useEffect(() => {
-  //   fetch(`/api/blogs/${slug}`).then(...);
+  //   fetch(`/api/type=""blogs/${slug}`).then(...);
   // }, [slug]);
 
   return (
