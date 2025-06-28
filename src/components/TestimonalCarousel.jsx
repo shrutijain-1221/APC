@@ -101,7 +101,7 @@ const TestimonalCarousel = () => {
                   transition={{ duration: 0.5 }}
                   className={`h-full w-full flex items-center justify-center text-center px-4 `}
                 >
-                 <img src={founder1} alt="Founder" className="w-full h-full object-cover" />
+                 <img src={founder1} alt="Founder" className="w-full h-full object-cover object-top" />
                 </motion.div>
               </motion.div>
             );

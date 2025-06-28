@@ -47,9 +47,9 @@ const TestimonialCards = ({ content, image, name, role, reverse }) => {
         transition={{ duration: 0.6 }}
         className="w-full md:w-full    p-6 max-w-full bg-[#a3d9b1]/40 shadow-md   backdrop-blur-sm"
       >
-        <p className="text-gray-700 text-base mb-4 whitespace-pre-line">{content}</p>
-        <div className="text-sm text-gray-900 font-semibold">{name}</div>
-        <div className="text-xs text-gray-500">{role}</div>
+        <p className="text-gray-700  text-xl mb-4 whitespace-pre-line">{content}</p>
+        <div className="text-2xl text-gray-900 font-semibold">{name}</div>
+        <div className="text-lg text-gray-500">{role}</div>
       </motion.div>
     </div>
   );

@@ -13,13 +13,13 @@ const TestimonalsPage = () => {
       content: "This was my first time ordering handcrafted accessories from India and I couldn’t be happier with the experience. The quality and detailing were impressive, and you could tell the pieces were made with care. I had a few questions at the start but the team at AP Curated Couture was helpful and responsive throughout. The headbands I ordered looked just as beautiful in person and added the perfect touch to our get-together. Would definitely recommend them to anyone looking for something unique and thoughtfully made.",
       image: client1,
       name: "Ashley Loupe",
-      role: "Founder, APC",
+      role: "Client",
     },
     {
       content: "We were looking for something fun and coordinated for a casual outdoor event, and AP Curated Couture absolutely delivered. The headbands were stylish, comfortable, and full of character. Each design had its own charm, and the embroidery was beautifully done. The ordering process was smooth and everything arrived right on time. It was a great experience from start to finish and added something special to our day.",
       image: client2,
       name: "Brooke Hillman",
-      role: "Creative Director",
+      role: "Client",
     },
     {
       content: "I discovered AP Curated Couture through a friend and instantly fell in love with their elegant style. The craftsmanship stood out right away, with intricate details, premium finish, and a clear sense of individuality in each piece. It felt like more than just buying accessories. Looking forward to adding more of their beautiful pieces to my collection.",

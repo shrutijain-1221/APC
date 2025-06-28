@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import founder from '../assets/founder.png'; // Example image, replace with actual image path
+import { Link } from 'react-router-dom';
 const blogs = Array.from({ length: 8 }).map((_, index) => ({
   id: index,
   title: `Workplace Safety Strategies: How to Keep Employees Safe During National Safety Month`,
@@ -8,11 +9,12 @@ const blogs = Array.from({ length: 8 }).map((_, index) => ({
   image: founder, // Replace with actual image path
   description: 'This is a sample description for the blog post.'
 }));
-
+const slugify = (text) =>
+  text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 const BlogCard = ({ blog, delay, direction }) => {
   const controls = useAnimation();
   const ref = useRef();
-
+const slug = slugify(blog.title);
   useEffect(() => {
     const observer = new IntersectionObserver(
       async ([entry]) => {
@@ -39,15 +41,14 @@ const BlogCard = ({ blog, delay, direction }) => {
   }, [controls, delay, direction]);
 
   return (
-    <motion.div
-      ref={ref}
-      animate={controls}
-      initial={{ opacity: 0, x: direction === 'left' ? -100 : 100 }}
-      className="bg-white  shadow-lg overflow-hidden"
-    >
-      <div className=" shadow-lg overflow-hidden flex flex-col bg-white">
-
-  <div className="relative h-[250px] group">
+     <Link to={`/blog/${slug}`}>
+   <motion.div
+  ref={ref}
+  animate={controls}
+  initial={{ opacity: 0, x: direction === 'left' ? -100 : 100 }}
+  className="bg-white shadow-lg overflow-hidden h-[500px] flex flex-col"
+>
+  <div className="h-[350px] relative group">
     <img
       src={blog.image}
       alt="blog"
@@ -62,14 +63,13 @@ const BlogCard = ({ blog, delay, direction }) => {
 
   {/* Content */}
   <div className="p-4 flex flex-col flex-1">
-    <h3 className="text-base font-semibold leading-snug mb-3 line-clamp-4">
+    <h3 className="text-base mt-auto font-semibold leading-snug mb-3 line-clamp-4">
       {blog.title}
     </h3>
-    <p className="text-[#018A8C] font-semibold mt-auto">{blog.date}</p>
+    <p className="text-[#018A8C] font-semibold ">{blog.date}</p>
   </div>
-</div>
-      
-    </motion.div>
+</motion.div>
+</Link>
   );
 };
 
