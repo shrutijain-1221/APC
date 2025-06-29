@@ -118,7 +118,7 @@ const AboutUs = () => {
     alt="Kamal Piplani"
     className="w-full h-[550px] object-cover object-right object-top"
   />
- <div className="absolute bottom-4 left-4 flex left-1/2 transform -translate-x-1/2 ">
+ <div className="absolute bottom-4  flex left-1/2 transform -translate-x-1/2 ">
   {/* Box 1 - Red */}
   <div className="bg-red-600 text-white p-4  shadow-md w-32">
     <p className="text-2xl font-bold">1K+</p>
