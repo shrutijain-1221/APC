@@ -145,8 +145,19 @@ const Navbar = () => {
               className="fixed top-0 left-0 w-full h-full bg-white z-50 flex flex-col px-20 py-8"
             >
               <div className="absolute px-20 right-6 w-6 h-6 cursor-pointer" onClick={toggleMenu}>
-                <motion.div className="absolute w-8 h-[2px] bg-black rotate-45 top-1/2 left-0" />
-                <motion.div className="absolute w-8 h-[2px] bg-black -rotate-45 top-1/2 left-0" />
+               <motion.div
+    initial={{ rotate: 0, y: -6 }}
+    animate={menuOpen ? { rotate: 45, y: 0 } : { rotate: 0, y: -6 }}
+    transition={{ duration: 0.5 }}
+    className="absolute w-8 h-[2px] bg-black "
+  />
+  {/* Line 2 */}
+  <motion.div
+    initial={{ rotate: 0, y: 6 }}
+    animate={menuOpen ? { rotate: -45, y: 0 } : { rotate: 0, y: 6 }}
+    transition={{ duration: 0.5 }}
+    className="absolute w-8 h-[2px] bg-black "
+  />
               </div>
 
               {/* Mobile Links */}
