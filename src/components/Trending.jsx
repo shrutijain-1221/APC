@@ -28,7 +28,9 @@ const TrendingSection = () => {
   return (
     <section className=" mt-1 text-white py-10  sm:px-8 overflow-x-hidden">
       
-      <h2 className="text-3xl font-semibold text-[#232323] text-center font-[poppins]  mb-5">Trending Now</h2>
+      <h2 className="text-5xl text-[#232323] text-center font-oswald  mb-5"
+      style={{ fontWeight: 500 }}>
+      Trending Now</h2>
        <p className="text-center text-xl mb-10 text-[#666]">
         Discover our most popular fashion accessories loved by customers worldwide
       </p>
@@ -36,7 +38,13 @@ const TrendingSection = () => {
         {trendingItems.map((item, index) => (
           <div
             key={item.id}
-            className="bg-[#d3e6ce] overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+            className="border overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+            style={{
+              borderColor: "#212121",
+              borderWidth: "1px",
+              borderStyle: "solid",
+              color: "#212121", // Text color here
+            }}
           >
             <img
               src={item.image}
@@ -46,9 +54,17 @@ const TrendingSection = () => {
             <div className="p-5 text-black text-center h-full">
               <h3 className="text-xl font-semibold">{item.title}</h3>
               <p className="text-md min-h-[3rem] mt-2 mb-4">{item.description}</p>
-<button className="bg-[#a3d9b1] text-white text-sm font-semibold px-5 py-2 rounded-md">
-  Trending {index + 1} <span className="ml-1 text-xl">→</span>
-</button>
+              <button
+                className="text-sm font-semibold px-5 py-2 border rounded-md"
+                style={{
+                  borderColor: "#212121",
+                  borderWidth: "1px",
+                  borderStyle: "solid",
+                  color: "#212121", // Text color here
+                }}
+              >
+                Trending {index + 1} <span className="ml-1 text-xl">→</span>
+              </button>
             </div>
           </div>
         ))}
@@ -57,7 +73,7 @@ const TrendingSection = () => {
         <NavLink
                   to="/trending"
                   onClick={() => setMenuOpen(false)}
-                  className="bg-[#a3d9b1] px-5 py-2 rounded-md text-white"
+                  className="bg-[#212121] px-5 py-2 rounded-md text-white"
                 >
                   See All Trending
                 </NavLink>

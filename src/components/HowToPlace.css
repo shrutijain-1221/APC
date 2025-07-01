@@ -1,4 +1,4 @@
-.how-order-section {
+/* .how-order-section {
   padding: 3rem 0;
   background: #000000;
 }
@@ -71,7 +71,7 @@
 }
 
 /* Rotate arrow for mobile screens */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .arrow-container {
     transform: rotate(90deg);
     margin: 1rem 0;
@@ -81,4 +81,14 @@
     width: 40px !important;
     height: 40px !important;
   }
+} */
+
+
+.custom-scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scroll-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

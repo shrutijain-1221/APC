@@ -7,14 +7,14 @@ const team = [
   {
     name: 'Akansha Piplani',
     role: 'Co-Founder & CEO',
-    email: 'jane.doe@email.com',
+    email: 'akki.ahuja2@gmail.com',
     image: founderImg,
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/akansha-ahuja-23272673/',
   },
    {
     name: 'Kamal Piplani',
-    role: 'Co-Founder & CEO',
-    email: 'hardeep@88gravity.com',
+    role: 'Co-Founder & COO',
+    email: 'piplani.kamal@gmail.com',
     image: founderImg2,
     linkedin: '#',
   },
@@ -48,18 +48,21 @@ const Card = ({ member }) => (
 const Team = () => {
   return (
     <div className="flex justify-center">
-      <div className="md:w-[100%] w-[100%] h-full md:h-[450px] bg-[#ddfae7] p-6 ">
+      <div className="md:w-[100%] w-[100%] h-full md:h-[450px] bg-[#d4e6ce] p-6 ">
         <div className="flex flex-col md:grid md:grid-cols-4 gap-6">
           
           {/* Heading & Button (Visible on md and up) */}
           <div className="md:col-span-2 order-1 flex flex-col justify-center items-center">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4 font-[Poppins] text-center">
+            <h2 className="text-4xl sm:text-5xl mb-4 font-oswald text-center"
+            style={{ fontWeight: 500 }}>
               People Loved <br className="hidden md:block" /> Our Team
             </h2>
 
             {/* Button only visible on md and up */}
             <div className="hidden md:flex justify-center items-center">
-              <button className="bg-[#a3d9b1] text-md font-semibold px-6 py-3 rounded-md text-white hover:bg-[#8ed0a4] transition-all mt-2">
+              <button className=" text-md font-semibold px-6 py-3 rounded-md border text-[212121] hover:text-white hover:bg-[#212121] transition-all mt-2"
+                style={{ borderColor: "#212121", borderWidth: "1px", borderStyle: "solid" }}
+              >
                 See All Members
               </button>
             </div>

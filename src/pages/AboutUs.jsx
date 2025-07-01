@@ -98,7 +98,7 @@ const AboutUs = () => {
   {/* Left text block */}
  <div className="text-[#444] text-lg leading-relaxed order-2 md:order-1">
   <h3 className="text-2xl font-semibold text-[#232323] mb-1">Kamal Piplani</h3>
-  <p className="text-[#777] mb-4">Co-Founder & CEO</p>
+  <p className="text-[#777] mb-4">Co-Founder & COO</p>
   <p className="mb-4">
     Kamal Piplani, a BBA graduate from Symbiosis and MBA from IMT Ghaziabad, co-founded AP Curated Couture in 2018 alongside Akansha. With a strategic mindset, he focuses on business growth, international expansion, and driving operational excellence for the brand.
   </p>
@@ -116,7 +116,7 @@ const AboutUs = () => {
   <img
     src={kamalImg}
     alt="Kamal Piplani"
-    className="w-full h-[550px] object-cover object-right object-top"
+    className="w-full h-[750px] object-cover object-right object-top"
   />
  <div className="absolute bottom-4  flex left-1/2 transform -translate-x-1/2 ">
   {/* Box 1 - Red */}
