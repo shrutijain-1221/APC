@@ -14,11 +14,13 @@ const socialLinks = [
   { href: 'https://in19047554098tvzf.trustpass.alibaba.com/index.html', icon: baba, label: 'Alibaba' },
 ];
 
-const headingLines = [
-  'YOUR TRUSTED',
-  'WHOLESALE FASHION',
-  'PARTNER',
-  'AP CURATED COTURE',
+const headingLine1 = [
+  'Your Wholesale',
+  'Partenr',
+];
+const headingLine2 = [
+  'In Fashion', 
+  'AP Couture',
 ];
 
 const charVariants = {
@@ -60,7 +62,11 @@ const mobileVideoRef = useRef(null);
             initial={{ opacity: 0, transform: 'translate(100%, -50%)' }}
             animate={{ opacity: 1, transform: 'translate(0%, -50%)' }}
             transition={{ duration: 1.2, ease: 'easeOut' }}
-            className="w-[900px] h-[600px] absolute border-8 border-white right-[-20%] top-1/2 z-20 overflow-hidden"
+            className="w-[900px] h-[600px] absolute border border-white right-[-20%] top-1/2 z-20 overflow-hidden"
+            style={{
+              borderWidth: "12px",
+              borderStyle: "solid",
+            }}
           >
             <img
               src={videoThumbnail}
@@ -85,23 +91,32 @@ const mobileVideoRef = useRef(null);
             animate={{ opacity: 1, transform: 'translate(0%, 0%)' }}
             transition={{ duration: 1.2, ease: 'easeOut', delay: 0.8 }}
             onAnimationComplete={() => setStartTextAnimation(true)}
-            className="w-[410px] h-72 bg-gray-200 absolute left-[5%] border-8 border-white z-30 p-3"
+            className="w-[440px] h-[360px] bg-gray-200 absolute left-[5%] border-white border z-30 p-3"
+            style={{
+              borderWidth: "12px",
+              borderStyle: "solid",
+            }}
           >
-            <div className="mb-4 space-y-1">
-              {headingLines.map((line, index) => {
+            <div className="mb-4 space-y-1 font-oswald-400">
+              {[...headingLine1, ...headingLine2].map((line, index) => {
                 const staticPart = line.slice(0, 3);
                 const animatedPart = line.slice(3);
+
+                // Alternate color: first 2 lines gray, next 2 black
+                const isGray = index < headingLine1.length;
+                const textColor = isGray ? 'text-[#6b6b6b]' : 'text-black';
 
                 return (
                   <p
                     key={index}
-                    className="text-[2.1rem] font-light text-[#232323] tracking-[0.01em] leading-[1.2] uppercase text-left font-[poppins]"
+                    className={`text-[2.7rem] ${textColor} tracking-[0.01em] leading-[1.2] uppercase text-left font-oswald-400`}
+                    style={{ fontWeight: 500 }}
                   >
                     <span>{staticPart}</span>
                     {startTextAnimation &&
                       animatedPart.split('').map((char, i) => (
                         <motion.span
-                          key={i}
+                          key={`line-${index}-${i}`}
                           custom={i}
                           initial="hidden"
                           animate="visible"
@@ -115,7 +130,6 @@ const mobileVideoRef = useRef(null);
                 );
               })}
             </div>
-              
             <div className="flex gap-5 mt-5 items-center justify-center">
               {socialLinks.map((link) => (
   <div

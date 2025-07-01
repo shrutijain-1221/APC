@@ -1,4 +1,8 @@
 import React from 'react';
+import instagramQr from '../assets/instagram-qr.png'; 
+import facebookQr from '../assets/facebook-qr.png'; 
+import alibabaQr from '../assets/alibaba-qr.png'; 
+import linkedinQr from '../assets/linkedin-qr.png'; 
 import './Footer.css';
 
 const Footer = () => {
@@ -27,19 +31,34 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer-contact">
-          <h3>Contact Us</h3>
+          <h3 className='text-center'>Contact Us</h3>
           <div className="footer-qr-row">
             <div className="footer-qr-block">
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://facebook.com" alt="Facebook QR" />
+              <a href="https://www.facebook.com/AkkiFashionista" target="_blank" rel="noopener noreferrer">
+                <img src={facebookQr} alt="Facebook QR" />
+              </a>
               <span>Facebook</span>
             </div>
+
             <div className="footer-qr-block">
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://instagram.com" alt="Instagram QR" />
+              <a href="https://www.instagram.com/apcc.2018?igsh=bDBsYzI3aHE0Nnh6" target="_blank" rel="noopener noreferrer">
+                <img src={instagramQr} alt="Instagram QR" />
+              </a>
               <span>Instagram</span>
             </div>
+
             <div className="footer-qr-block">
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://linkedin.com" alt="LinkedIn QR" />
+              <a href="https://www.linkedin.com/company/ap-curated-couture/" target="_blank" rel="noopener noreferrer">
+                <img src={linkedinQr} alt="LinkedIn QR" />
+              </a>
               <span>LinkedIn</span>
+            </div>
+
+            <div className="footer-qr-block">
+              <a href="https://apcuratedcouture.trustpass.alibaba.com/" target="_blank" rel="noopener noreferrer">
+                <img src={alibabaQr} alt="Alibaba QR" />
+              </a>
+              <span>Alibaba</span>
             </div>
           </div>
         </div>

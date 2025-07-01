@@ -49,8 +49,9 @@ const TestimonalCarousel = () => {
 
   return (
     <div className="py-10 ">
-      <h2 className="text-3xl font-semibold text-[#232323] text-center font-[poppins] mb-5">
-       Gallery
+      <h2 className="text-5xl text-[#232323] text-center font-oswald mb-5"
+      style={{ fontWeight: 500 }}>
+       Our Gallery
       </h2>
 
       <div className="relative w-full flex items-center justify-center">
