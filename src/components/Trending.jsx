@@ -28,8 +28,8 @@ const TrendingSection = () => {
   return (
     <section className=" mt-1 text-white py-10  sm:px-8 overflow-x-hidden">
       
-      <h2 className="text-5xl text-[#232323] text-center font-oswald  mb-5"
-      style={{ fontWeight: 500 }}>
+      <h2 className="text-5xl text-[#232323] text-center font-oswald  font-medium mb-5"
+      >
       Trending Now</h2>
        <p className="text-center text-xl mb-10 text-[#666]">
         Discover our most popular fashion accessories loved by customers worldwide

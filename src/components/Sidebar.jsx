@@ -39,17 +39,17 @@ const Sidebar = () => {
 
   return (
     <div className="w-1/6 p-6 border-r border-gray-300">
-      <h2 className="text-4xl mb-2 text-[#666]">Browse by</h2>
+      <h2 className="text-4xl font-oswald  font-medium mb-2 text-[#666]">Browse by</h2>
       <hr className="mb-2" />
 
       <div className="mb-6">
-        <h3 className="text-xl mb-2">Categories</h3>
+        <h3 className="text-2xl mb-2">Categories</h3>
         <hr className="mb-2" />
         <ul className="space-y-1 text-lg max-h-48 overflow-y-auto pr-2 scroll-hide">
           {categories.map(cat => (
             <li
               key={cat}
-            className={`cursor-pointer px-1 rounded ${
+            className={`cursor-pointer font-sans px-1 py-1 hover:font-medium rounded ${
   slugify(selectedCategory || '') === slugify(cat) ? 'font-bold' : ''
 }`}
 
@@ -62,13 +62,13 @@ const Sidebar = () => {
       </div>
 
       <div className="mb-6">
-        <h3 className="text-xl mb-2">Shop by Season</h3>
+        <h3 className="text-2xl mb-2">Shop by Season</h3>
         <hr className="mb-2" />
         <ul className="space-y-1 text-lg max-h-48 overflow-y-auto pr-2 scroll-hide">
           {seasons.map(season => (
             <li
               key={season}
-            className={`cursor-pointer px-1 rounded ${
+            className={`cursor-pointer font-sans px-1 py-1 rounded hover:font-medium ${
   slugify(selectedSeason || '') === slugify(season) ? 'font-bold' : ''
 }`}
               onClick={() => navigate(`/accessories/${slugify(season)}`)}
@@ -80,10 +80,10 @@ const Sidebar = () => {
       </div>
 
       <div>
-        <h3 className="text-xl mb-2">Custom Requests</h3>
+        <h3 className="text-2xl mb-2">Custom Requests</h3>
         <hr className="mb-2" />
         <ul className="text-lg">
-          <li className="cursor-pointer">Custom Packaging</li>
+          <li className="cursor-pointer font-sans hover:font-medium">Custom Packaging</li>
         </ul>
       </div>
     </div>
