@@ -33,7 +33,7 @@
   transition: color 0.2s;
 }
 .footer-links a:hover {
-  color: #ddfae7;
+font-weight: bold;
 }
 .footer-factory-q {
   font-size: 0.98rem;

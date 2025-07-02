@@ -1,5 +1,6 @@
 .stats-container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
@@ -7,7 +8,7 @@
 }
 
 .stat-card {
- width: 180px;
+  width: 180px;
   padding: 0.8rem 0.8rem;
   background-color: rgba(255, 255, 255, 0.05); 
   border-radius: 20px;
@@ -27,13 +28,13 @@
 .count {
   font-size: 2rem;
   font-weight: bold;
-  color: black;
+  color: white;
   margin-bottom: 0.5rem;
 }
 
 .desc {
   font-size: 1rem;
-  color: #666;
+  color: white;
 }
 
 @keyframes rotate {
@@ -49,4 +50,15 @@
   font-size: 2rem;
   margin-bottom: 0.5rem;
   color: #444;
+}
+
+@media (max-width: 800px) {
+  .stats-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem;
+  }
 }

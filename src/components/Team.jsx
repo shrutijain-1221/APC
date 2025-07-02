@@ -72,13 +72,13 @@ const Team = () => {
         {/* Heading and Images */}
         <div className="flex flex-col md:flex-row w-full items-start relative">
           {/* Left: Heading and Images */}
-          <div className="flex-1">
-            <div className="flex flex-col items-start mb-8">
-              <h2 className="text-4xl sm:text-5xl ml-40 mb-4 font-oswald text-left" style={{ fontWeight: 500 }}>
+          <div className=" w-full">
+            <div className="flex items-center justify-center md:justify-start mb-8">
+              <h2 className="text-4xl  md:text-5xl md:ml-40 mb-4 font-oswald text-left font-medium" >
                 Meet Our Founders
               </h2>
             </div>
-            <div className="flex flex-col md:flex-row gap-6 w-full items-start">
+            <div className="flex flex-col md:flex-row gap-6 w-full items-center md:items-start">
               {team.slice(0, 2).map((member, idx) => (
                 <div key={idx} className="flex justify-start">
                   <Card member={member} />

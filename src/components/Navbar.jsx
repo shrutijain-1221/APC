@@ -124,7 +124,7 @@ const Navbar = () => {
             <li><NavLink to="/blogs" className={navLinkStyle}>Blogs</NavLink></li>
             <li><NavLink to="/testimonals" className={navLinkStyle}>Testimonals</NavLink></li>
             <li>
-              <NavLink to="/appointment" className="bg-[#212121] px-5 py-2 rounded-md text-white">
+              <NavLink to="/appointment" className="bg-[#212121] px-6 text-center py-2 rounded-md text-white">
                 Book an Appointment
               </NavLink>
             </li>
