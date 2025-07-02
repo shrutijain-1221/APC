@@ -31,7 +31,7 @@ const TestimonalsPage = () => {
 
   return (
     <div className="bg-gray-50 px-2 mt-24 overflow-x-hidden">
-      <h2 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
+      <h2 className="text-4xl font-oswald  font-medium text-center mb-12 ">What Our Clients Say</h2>
       {testimonials.map((t, index) => (
         <TestimonialCards
           key={index}
