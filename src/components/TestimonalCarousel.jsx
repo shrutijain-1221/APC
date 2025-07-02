@@ -48,7 +48,7 @@ const TestimonalCarousel = () => {
   };
 
   return (
-    <div className="py-10 ">
+    <div className="py-10 bg-[#f5f5f5]">
       <h2 className="text-5xl text-[#232323] text-center font-oswald mb-5"
       style={{ fontWeight: 500 }}>
        Our Gallery

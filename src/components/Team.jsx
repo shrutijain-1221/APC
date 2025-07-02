@@ -1,7 +1,11 @@
 import React from 'react';
 import { FaLinkedin } from "react-icons/fa";
-import founderImg from '../assets/founder.png'; // Placeholder image, replace with actual founder image
-import founderImg2 from '../assets/founder1.png'; // Placeholder image, replace with actual second founder image
+import founderImg from '../assets/founder.jpg'; // Placeholder image, replace with actual founder image
+import founderImg2 from '../assets/founder1.jpg'; // Placeholder image, replace with actual second founder image
+
+const foundersVideo = "https://apc-assets-2025.s3.ap-northeast-1.amazonaws.com/apc_videos/founders.mp4"
+const popAnimation = `@keyframes pop {0%,100%{transform:scale(1);}10%{transform:scale(1.12);}20%{transform:scale(0.98);}30%{transform:scale(1.08);}40%{transform:scale(0.97);}50%{transform:scale(1.05);}60%{transform:scale(1);}}.animate-pop{animation:pop 1.5s infinite;}`;
+
 const team = [
  
   {
@@ -47,43 +51,51 @@ const Card = ({ member }) => (
 
 const Team = () => {
   return (
-    <div className="flex justify-center">
-      <div className="md:w-[100%] w-[100%] h-full md:h-[450px] bg-[#d4e6ce] p-6 ">
-        <div className="flex flex-col md:grid md:grid-cols-4 gap-6">
-          
-          {/* Heading & Button (Visible on md and up) */}
-          <div className="md:col-span-2 order-1 flex flex-col justify-center items-center">
-            <h2 className="text-4xl sm:text-5xl mb-4 font-oswald text-center"
-            style={{ fontWeight: 500 }}>
-              People Loved <br className="hidden md:block" /> Our Team
-            </h2>
-
-            {/* Button only visible on md and up */}
-            <div className="hidden md:flex justify-center items-center">
-              <button className=" text-md font-semibold px-6 py-3 rounded-md border text-[212121] hover:text-white hover:bg-[#212121] transition-all mt-2"
-                style={{ borderColor: "#212121", borderWidth: "1px", borderStyle: "solid" }}
-              >
-                See All Members
-              </button>
+    <div className="relative flex flex-col items-center w-full h-full p-6 overflow-hidden">
+      <style>{popAnimation}</style>
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0 hidden md:block"
+        style={{ objectFit: 'cover', minHeight: '100%', minWidth: '100%' }}
+      >
+        <source src={foundersVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      {/* Overlay for readability */}
+      <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-0 z-10 hidden md:block" />
+      {/* Content */}
+      <div className="relative z-20 w-full">
+        {/* Heading and Images */}
+        <div className="flex flex-col md:flex-row w-full items-start relative">
+          {/* Left: Heading and Images */}
+          <div className="flex-1">
+            <div className="flex flex-col items-start mb-8">
+              <h2 className="text-4xl sm:text-5xl ml-40 mb-4 font-oswald text-left" style={{ fontWeight: 500 }}>
+                Meet Our Founders
+              </h2>
+            </div>
+            <div className="flex flex-col md:flex-row gap-6 w-full items-start">
+              {team.slice(0, 2).map((member, idx) => (
+                <div key={idx} className="flex justify-start">
+                  <Card member={member} />
+                </div>
+              ))}
             </div>
           </div>
-
-          {/* First 2 Cards */}
-          {team.slice(0, 2).map((member, idx) => (
-            <div key={idx} className="order-2 flex justify-center">
-              <Card member={member} />
-            </div>
-          ))}
-
-          {/* Button for mobile only (below cards) */}
-          <div className="flex md:hidden justify-center items-center order-3 mt-4">
-            <button className="bg-[#a3d9b1] text-md font-semibold px-6 py-3 rounded-md text-white hover:bg-[#8ed0a4] transition-all">
-              See All Members
-            </button>
-          </div>
+        </div>
+        {/* Mobile: See All Members button below images */}
+        <div className="flex justify-center mt-6 w-full">
+          <button className="text-md font-semibold px-6 py-3 rounded-md bg-[#ffffff] ml-[850px] text-[212121] hover:text-white hover:bg-[#212121] transition-all animate-pop">
+            People Loved Our Team
+          </button>
         </div>
       </div>
     </div>
   );
 };
+
 export default Team;

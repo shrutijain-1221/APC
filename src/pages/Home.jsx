@@ -13,6 +13,7 @@ const Home = () => {
   return (
    <>
     <APCotureHighlight/>
+    <ShopBySeason/>
     <Trending/>
     {/* <section className="shop-season-section">
       <h2 className="shop-season-title">Shop by Season and Theme</h2>
@@ -27,7 +28,6 @@ const Home = () => {
         ))}
       </div>
     </section> */}
-    <ShopBySeason/>
     <HowToPlace/>
     
 <Team/>

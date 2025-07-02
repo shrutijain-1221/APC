@@ -12,6 +12,8 @@ import ScrollToTop from './components/ScrollToTop'
 import AccessoryDetail from './pages/AccessoryDetail'
 import BlogDetail from './components/BlogDetail'
 import AccessoryLayout from './pages/AccessoryLayout'
+import WhatsappFloat from './components/WhatsappFloat'
+import ChatbotFloat from './components/ChatbotFloat'
 
 function App() {
 
@@ -33,6 +35,8 @@ function App() {
   </Route>
      </Routes>
      <Footer/>
+     <ChatbotFloat />
+     <WhatsappFloat />
      </BrowserRouter>
     </>
   )

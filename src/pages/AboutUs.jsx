@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import akanshaImg from '../assets/founder.png'; 
-import kamalImg from '../assets/founder1.png'; 
+import akanshaImg from '../assets/founder.jpg'; 
+import kamalImg from '../assets/founder1.jpg'; 
 import group from '../assets/team_photo.png'; 
 import sampleVideo from '../assets/5759073-uhd_3840_2160_30fps.mp4';
 import Slider from "react-slick";
