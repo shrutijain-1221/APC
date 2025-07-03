@@ -122,6 +122,7 @@ const Navbar = () => {
             <li><NavLink to="/trending" className={navLinkStyle}>Trending</NavLink></li>
             <li><NavLink to="/aboutus" className={navLinkStyle}>About us</NavLink></li>
             <li><NavLink to="/blogs" className={navLinkStyle}>Blogs</NavLink></li>
+             <li><NavLink to="/infrastructure" className={navLinkStyle}>Infrastructure</NavLink></li>
             <li><NavLink to="/testimonals" className={navLinkStyle}>Testimonals</NavLink></li>
             <li>
               <NavLink to="/appointment" className="bg-[#212121] px-6 text-center py-2 rounded-md text-white">
@@ -169,6 +170,7 @@ const Navbar = () => {
                   { to: "/aboutus", label: "About us" },
                   { to: "/blogs", label: "Blogs" },
                   { to: "/testimonals", label: "Testimonals" },
+                  { to: "/infrastructure", label: "Infrastructure" },
                 ].map(({ to, label }) => (
                   <NavLink
                     key={to}
