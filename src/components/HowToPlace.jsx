@@ -69,7 +69,7 @@ const HowToPlace = () => {
 
   return (
     <section className="py-16 bg-white mb-10 overflow-hidden">
-      <h2 className="text-5xl text-center text-[#232323] font-oslwald mb-10" style={{ fontWeight: 500 }}>
+      <h2 className="text-5xl text-center text-[#232323] font-oslwald mb-10 font-bold">
         How to Place an Order?
       </h2>
 
