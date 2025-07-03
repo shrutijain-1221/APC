@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 import customInquiryIcon from '../assets/srep1.png';
 import chatIcon from '../assets/srep2.png';
@@ -26,26 +25,26 @@ const steps = [
 ];
 
 const HowToPlace = () => {
-  const scrollRef = useRef(null);
   const containerRef = useRef(null);
-  const isInView = useInView(containerRef, { once: true });
+  const isInView = useInView(containerRef, { amount: 0.4 });
   const controls = useAnimation();
 
   useEffect(() => {
     if (isInView) {
       controls.start({
-        x: [0, -1000],
+        x: ["-100%", "0%"],
         transition: {
-          repeat: Infinity,
-          repeatType: "loop",
-          ease: "linear",
           duration: 20,
+          repeat: Infinity,
+          ease: "linear",
         },
       });
+    } else {
+      controls.stop(); // stop when not visible
     }
   }, [isInView, controls]);
 
-  const renderSteps = () => (
+  const renderSteps = () =>
     steps.map((step, index) => (
       <React.Fragment key={index}>
         <div className="flex flex-col items-center flex-shrink-0 w-40">
@@ -54,32 +53,36 @@ const HowToPlace = () => {
             alt={step.label}
             className="w-full h-full object-contain mb-2"
           />
-          <p className="text-center text-sm font-medium whitespace-nowrap">{step.label}</p>
+          <p className="text-center text-sm font-medium whitespace-nowrap">
+            {step.label}
+          </p>
         </div>
         {index < steps.length - 1 && (
           <img
             src={directionalArrow}
             alt="Arrow"
-            className="w-20 h-25 flex-shrink-0"
+            className="w-10 h-10 flex-shrink-0"
           />
         )}
       </React.Fragment>
-    ))
-  );
+    ));
 
   return (
-    <section className="py-16 bg-white mb-10 overflow-hidden">
+    <section className="py-16 bg-white mb-10">
       <h2 className="text-5xl text-center text-[#232323] font-oslwald mb-10 font-bold">
         How to Place an Order?
       </h2>
 
-      <div ref={containerRef} className="relative w-full overflow-hidden">
+      <div ref={containerRef} className="w-full overflow-hidden">
         <motion.div
-          ref={scrollRef}
           animate={controls}
-          className="flex space-x-6 px-4 items-center"
+          className="flex items-center gap-6"
+          style={{
+            minWidth: "200%",
+            willChange: "transform",
+          }}
         >
-          {[...renderSteps(), ...renderSteps()] /* duplicate for infinite scroll illusion */}
+          {[...renderSteps(), ...renderSteps()]}
         </motion.div>
       </div>
     </section>

@@ -1,0 +1,119 @@
+import React from 'react';
+import group from '../assets/team_photo.png';
+import { motion } from 'framer-motion';
+
+import cadsystem from '../assets/cad-system.png';
+import cutting from '../assets/cutting.png';
+import dressmaker from '../assets/dress-maker.png';
+import embroideryfacility from '../assets/embroidery-facility.png';
+import finestmaterial from '../assets/finest-material.png';
+import laboratory from '../assets/laboratory.png';
+import machines from '../assets/machines.png';
+import meassurentexpert from '../assets/meassurent-expert.png';
+import wasing from '../assets/washing.png';
+import PhotoGallery from '../components/PhotoGallery';
+
+const Infrastructure = () => {
+  return (
+    <div className='overflow-x-hidden'>
+      {/* Header Section */}
+      <div className="mb-16 relative">
+        <motion.img
+          src={group}
+          alt="Group of Employees"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="w-full h-[600px] md:h-full object-cover shadow-lg"
+        />
+        <div className='absolute inset-0 bg-black/50 flex items-center'>
+          <div className="px-4 md:px-32 max-w-5xl">
+            <h2 className="text-4xl md:text-6xl font-semibold text-white font-[poppins] mb-3">
+              Infrastructure
+            </h2>
+            <p className="text-base md:text-xl text-white leading-relaxed">
+              Our legacy lies in our capability to meet the demand of the clients with quality products and that too on time. This has been possible for NDEH because of two new-age manufacturing plants in Noida. With over 650 machines set up, these two production lines run flawlessly to churn out the best there is. This also enables us to manufacture around a whopping 2.7 million pieces of clothing every year. Set with modern inner offices and extensive range of apparatus, these NDEH infrastructure are actually examples on their own.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 3 Column Layout */}
+ <div className="px-4 py-12 bg-white">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-0 max-w-screen-xl mx-auto">
+          {/* Column 1 */}
+          <div className="flex flex-col gap-0">
+            <InfraBlock icon={cutting} title="1350+ Machines" items={[
+              "Single needle lockstitch machine UBT", "Double needle lockstitch machine", "Single needle + Double Needle chain stick", "Over lock 4th 5th 6th (Thread)", "Edge cutter machine", "Flat lock machine", "Kansai special machine", "Rib Cutter", "Double needle waist elastic attach machine", "Button machine", "Button hole machine", "Bartack machine", "Computer embroidery machine", "Snap button machine"
+            ]} />
+            <InfraBlock icon={machines} title="Cutting Machines" items={[
+              "Straight knife 8”", "Band knife", "Fusing Machine"
+            ]} />
+            <InfraBlock icon={meassurentexpert} title="Measurement Expert" items={[
+              "Fully trained technical team of 8 members."
+            ]} isParagraph />
+          </div>
+
+          {/* Column 2 */}
+          <div className="flex flex-col gap-0">
+            <InfraBlock icon={cadsystem} title="CAD System" items={[
+              "Plotter", "Cutting Plotter", "MF Plotter", "Digitizer Scanner"
+            ]} />
+            <InfraBlock icon={finestmaterial} title="Finest Material" items={[
+              "Cotton", "Polyesters", "Rayon", "Blends"
+            ]} />
+            <InfraBlock icon={dressmaker} title="Dress Maker" items={[
+              "CAD Designer", "Fashion Designer", "Full set of product development team of 12 people."
+            ]} />
+          </div>
+
+          {/* Column 3 */}
+          <div className="flex flex-col gap-0">
+            <InfraBlock icon={laboratory} title="In House Laboratory" items={[
+              "Colour Matching Cabinet", "Tensile strength testing Matching Cabinet", "Tear strength test Matching Cabinet", "Button pull tester", "Yarn count tester", "Washing fastness tester", "Tumbler Matching Cabinet", "Hot air oven", "GSM cutter & washing Balance"
+            ]} />
+            <InfraBlock icon={wasing} title="Washing Facility" items={[
+              "Washing Machine", "Tumbler", "ferk", "Hydro Machine"
+            ]} />
+            <InfraBlock icon={embroideryfacility} title="Embroidery Facility" items={[
+              "4 head 9 color machine (for sampling alone)"
+            ]} isParagraph />
+          </div>
+        </div>
+      </div>
+      <PhotoGallery/>
+       <div className="px-4 py-8 bg-white max-w-screen-xl mx-auto text-gray-800">
+  <p className="text-base md:text-lg leading-relaxed">
+    Plants are midway air cooled. Our refined help offices incorporate in-house research facility and CAD.
+    The general capacity of electronic information trade has been generously diminished correspondence time
+    required for information trade designs amid the testing stages.
+  </p>
+  <p className="text-base md:text-lg leading-relaxed mt-4">
+    The working environment is ergonomically composed with appropriate lighting, space and solace.
+  </p>
+</div>
+    </div>
+  );
+};
+
+// 🔧 Reusable Component
+const InfraBlock = ({ icon, title, items, isParagraph = false }) => (
+  <div className="p-4">
+    <div className="flex items-center gap-2 mb-2">
+      <img src={icon} alt="" className="w-16 h-16 bg-black" />
+      <h3 className="text-lg font-semibold">{title}</h3>
+    </div>
+    {isParagraph ? (
+      <p className="text-sm text-gray-700">→ {items[0]}</p>
+    ) : (
+      <ul className="text-sm text-gray-700 space-y-1 list-none">
+        {items.map((item, i) => (
+          <li key={i}>→ {item}</li>
+        ))}
+      </ul>
+    )}
+
+  </div>
+);
+
+export default Infrastructure;
