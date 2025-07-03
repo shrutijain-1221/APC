@@ -3,9 +3,6 @@ import { FaLinkedin } from "react-icons/fa";
 import founderImg from '../assets/founder.jpg'; // Placeholder image, replace with actual founder image
 import founderImg2 from '../assets/founder1.jpg'; // Placeholder image, replace with actual second founder image
 
-const foundersVideo = "https://apc-assets-2025.s3.ap-northeast-1.amazonaws.com/apc_videos/founders.mp4"
-const popAnimation = `@keyframes pop {0%,100%{transform:scale(1);}10%{transform:scale(1.12);}20%{transform:scale(0.98);}30%{transform:scale(1.08);}40%{transform:scale(0.97);}50%{transform:scale(1.05);}60%{transform:scale(1);}}.animate-pop{animation:pop 1.5s infinite;}`;
-
 const team = [
  
   {
@@ -26,7 +23,7 @@ const team = [
 ];
 
 const Card = ({ member }) => (
-  <div className="relative w-[350px] h-[400px] rounded-lg overflow-hidden shadow-md group">
+  <div className="relative w-[350px] h-[400px] overflow-hidden shadow-md group">
     <img
       src={member.image}
       alt={member.name}
@@ -52,46 +49,29 @@ const Card = ({ member }) => (
 const Team = () => {
   return (
     <div className="relative flex flex-col items-center w-full h-full p-6 overflow-hidden">
-      <style>{popAnimation}</style>
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-0 hidden md:block"
-        style={{ objectFit: 'cover', minHeight: '100%', minWidth: '100%' }}
-      >
-        <source src={foundersVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      {/* Overlay for readability */}
       <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-0 z-10 hidden md:block" />
       {/* Content */}
-      <div className="relative z-20 w-full">
+      <div className="relative z-20 w-full flex flex-col items-center justify-center">
         {/* Heading and Images */}
-        <div className="flex flex-col md:flex-row w-full items-start relative">
+        <div className="flex flex-col w-full items-center justify-center relative">
           {/* Left: Heading and Images */}
-          <div className=" w-full">
-            <div className="flex items-center justify-center md:justify-start mb-8">
-              <h2 className="text-4xl  md:text-5xl md:ml-40 mb-4 font-oswald text-left font-medium" >
-                Meet Our Founders
+          <div className="w-full flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center mb-8 w-full">
+              <h2 className="text-5xl font-extrabold mb-12 text-center">
+                Meet Our <span className="text-[#FACC14]">Founders</span>
               </h2>
+              <p className="text-lg text-center max-w-2xl mb-12">
+              Akansha and Kamal Piplani launched AP Curated Couture in 2018 with a shared vision to blend fashion, purpose, and empowerment. Together, they've grown the brand into a globally recognized name rooted in handcrafted excellence and social impact.
+              </p>
             </div>
-            <div className="flex flex-col md:flex-row gap-6 w-full items-center md:items-start">
+            <div className="flex flex-col md:flex-row gap-8 w-full items-center justify-center text-center">
               {team.slice(0, 2).map((member, idx) => (
-                <div key={idx} className="flex justify-start">
+                <div key={idx} className="flex justify-center">
                   <Card member={member} />
                 </div>
               ))}
             </div>
           </div>
-        </div>
-        {/* Mobile: See All Members button below images */}
-        <div className="flex justify-center mt-6 w-full">
-          <button className="text-md font-semibold px-6 py-3 rounded-md bg-[#ffffff] ml-[850px] text-[212121] hover:text-white hover:bg-[#212121] transition-all animate-pop">
-            People Loved Our Team
-          </button>
         </div>
       </div>
     </div>

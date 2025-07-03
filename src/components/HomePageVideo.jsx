@@ -65,7 +65,7 @@ const TypingText = () => {
 const HomePageVideo = () => {
   return (
     <>
-      <div className="relative w-full h-[800px] video overflow-hidden">
+      <div className="relative w-full h-[1000px] video overflow-hidden">
         {/* Background Video */}
         <video
           autoPlay

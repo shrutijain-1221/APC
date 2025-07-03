@@ -47,10 +47,10 @@ const TrendingSection = () => {
 
       {/* Content */}
       <div className="relative z-20">
-        <h2 className="text-5xl text-[#232323] text-center font-oswald font-medium mb-5">
+        <h2 className="text-5xl text-[#232323] text-center font-oswald font-bold mb-5">
           Trending Now
         </h2>
-        <p className="text-center text-xl mb-10 text-[#666]">
+        <p className="text-center text-black text-xl mb-10 text-[#666]">
           Discover our most popular fashion accessories loved by customers worldwide
         </p>
 
