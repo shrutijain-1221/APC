@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { RiArrowDownSLine } from 'react-icons/ri';
 import founder from '../assets/founder.png';
 import Loader from '../components/Loader';
+import { useNavigate } from 'react-router-dom';
 
 const ALL_PRODUCTS = [
   { id: 1, name: 'Pink Headband', price: 12.99, color: 'pink', size: 'Small', inStock: true, image: founder },
@@ -29,7 +30,7 @@ const ITEMS_PER_PAGE = 3;
 const AccessoryDetail = () => {
   const { type } = useParams();
   const matchedLabel = type || 'Accessories';
-
+const navigate = useNavigate();
   const [sortOption, setSortOption] = useState('best');
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
@@ -85,7 +86,7 @@ const applyFilters = () => {
     price[1] === 50;
 
   if (isEmpty) {
-    // Reset filters and show all products
+   
     clearFilters();
   } else {
     setFilters(tempFilters);
@@ -265,7 +266,7 @@ useEffect(() => {
         {products.map((product, index) => {
           const isLast = index === products.length - 1;
           return (
-            <div key={product.id} ref={isLast ? lastProductRef : null} className="border rounded-2xl p-4 shadow-sm hover:shadow-lg transition duration-300">
+            <div onClick={() => navigate(`/accessories/${type}/${product.id}`)} key={product.id} ref={isLast ? lastProductRef : null} className="border rounded-2xl p-4 shadow-sm hover:shadow-lg transition duration-300">
               <motion.img
                 src={product.image}
                 alt={product.name}

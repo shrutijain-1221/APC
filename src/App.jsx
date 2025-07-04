@@ -15,6 +15,7 @@ import AccessoryLayout from './pages/AccessoryLayout'
 import WhatsappFloat from './components/WhatsappFloat'
 import ChatbotFloat from './components/ChatbotFloat'
 import Infrastructure from './pages/Infrastructure'
+import AccessoryProductDetailPage from './pages/AccessoryProductDetailPage'
 
 function App() {
 
@@ -33,9 +34,12 @@ function App() {
       <Route path='/blogs' element={<Blogs/>}/>
        <Route path="/blog/:slug" element={<BlogDetail />} />
         <Route path='/accessories' element={<AccessoryLayout />}>
+
     <Route path=':type' element={<AccessoryDetail />} />
+    
    
   </Route>
+  <Route path='/accessories/:type/:productId' element={<AccessoryProductDetailPage/>}/>
      </Routes>
      <Footer/>
      <ChatbotFloat />
