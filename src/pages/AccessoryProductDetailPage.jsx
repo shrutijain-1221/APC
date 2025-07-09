@@ -2,20 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Slider from 'react-slick';
-
+import size from '../assets/iconsize.png';
 import { MdOutlineArrowDropDown, MdOutlineArrowDropUp } from "react-icons/md";
 import { FiSearch, FiChevronLeft, FiChevronRight, FiX } from 'react-icons/fi';
 import { FiTruck, FiRotateCw, FiGift, FiInfo, FiDroplet, FiAlignLeft } from 'react-icons/fi';
-
+import { CiMenuBurger } from "react-icons/ci";
+import fabric from '../assets/fabric.png';
 import founder from '../assets/founder.png';
 import founder1 from '../assets/founder1.png';
 import CustomerReview from '../components/CustomerReview';
-
+import { MdOutlineDesignServices } from "react-icons/md";
 const ALL_PRODUCTS = [
   {
     id: 1,
     name: 'Pink Headband',
-    images: [founder, founder1, founder, founder1, founder],
+    images: [founder, founder1],
     description: 'Elegant pink headband, crafted with love and style.',
     washCare: 'Hand wash with cold water. Do not bleach.',
     shipping: 'Delivery in 5-7 business days.',
@@ -38,10 +39,15 @@ const Section = ({ title, content, icon: Icon, openSection, setOpenSection }) =>
         className="flex justify-between items-center text-[#71706e] text-lg w-full text-left font-medium"
         onClick={toggle}
       >
-        <div className="flex items-center gap-2">
-          {Icon && <Icon className="text-2xl text-[#71706e]" />}
-          <span>{title}</span>
-        </div>
+       <div className="flex items-center gap-2">
+  {Icon &&
+    (typeof Icon === 'string' ? (
+      <img src={Icon} alt={title} className="w-6 h-6 object-contain" />
+    ) : (
+      <Icon className="text-2xl text-[#71706e]" />
+    ))}
+  <span>{title}</span>
+</div>
         <span>{isOpen ? <MdOutlineArrowDropUp className='text-3xl text-[#606060]' /> : <MdOutlineArrowDropDown className='text-3xl text-[#606060]' />}</span>
       </button>
 
@@ -162,11 +168,10 @@ const AccessoryProductDetailPage = () => {
         {/* Product Info */}
         <div>
           <h1 className="text-3xl font-bold mb-6">{product.name}</h1>
-          <Section title="Description" icon={FiAlignLeft} content={product.description} openSection={openSection} setOpenSection={setOpenSection} />
-          <Section title="Wash Care" icon={FiDroplet} content={product.washCare} openSection={openSection} setOpenSection={setOpenSection} />
-          <Section title="Shipping" icon={FiTruck} content={product.shipping} openSection={openSection} setOpenSection={setOpenSection} />
-          <Section title="30 Days Free Return" icon={FiRotateCw} content={product.returnPolicy} openSection={openSection} setOpenSection={setOpenSection} />
-          <Section title="Colors" icon={FiInfo} content={product.colors} openSection={openSection} setOpenSection={setOpenSection} />
+          <Section title="Size" icon={size} content={product.description} openSection={openSection} setOpenSection={setOpenSection} />
+          <Section title="Feature" icon={CiMenuBurger} content={product.washCare} openSection={openSection} setOpenSection={setOpenSection} />
+          <Section title="Material Used" icon={fabric} content={product.shipping} openSection={openSection} setOpenSection={setOpenSection} />
+          <Section title="Custom Design Possible" icon={MdOutlineDesignServices} content={product.colors} openSection={openSection} setOpenSection={setOpenSection} />
           <Section title="Additional Information" icon={FiGift} content={product.additionalInfo} openSection={openSection} setOpenSection={setOpenSection} />
         </div>
       </div>
