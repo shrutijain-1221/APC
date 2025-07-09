@@ -62,6 +62,7 @@ const Sidebar = () => {
       </div>
 
       <div className="mb-6">
+         <hr className="mb-2" />
         <h3 className="text-2xl mb-2">Shop by Season</h3>
         <hr className="mb-2" />
         <ul className="space-y-1 text-lg max-h-48 overflow-y-auto pr-2 scroll-hide">
@@ -80,6 +81,7 @@ const Sidebar = () => {
       </div>
 
       <div>
+         <hr className="mb-2" />
         <h3 className="text-2xl mb-2">Custom Requests</h3>
         <hr className="mb-2" />
         <ul className="text-lg">

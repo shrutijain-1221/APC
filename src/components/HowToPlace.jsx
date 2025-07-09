@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-
+import StickyHorizontal from "./StickyHorizontal";
 import customInquiryIcon from '../assets/srep1.png';
 import chatIcon from '../assets/srep2.png';
 import exploreIcon from '../assets/srep3.png';
@@ -72,19 +72,8 @@ const HowToPlace = () => {
       <h2 className="text-5xl text-center text-[#232323] font-oslwald mb-10 font-bold">
         How to Place an Order?
       </h2>
-
-      <div ref={containerRef} className="w-full overflow-hidden">
-        <motion.div
-          animate={controls}
-          className="flex items-center gap-6"
-          style={{
-            minWidth: "200%",
-            willChange: "transform",
-          }}
-        >
-          {[...renderSteps(), ...renderSteps()]}
-        </motion.div>
-      </div>
+             <p className="text-center text-black text-xl mb-10 text-[#666]">Your custom creation starts here – just follow the journey</p>
+<StickyHorizontal/>
     </section>
   );
 };

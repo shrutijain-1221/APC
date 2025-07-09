@@ -167,7 +167,7 @@ useEffect(() => {
   const selectedSortLabel = SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || 'Sort By';
 
   return (
-    <div className="mt-24 px-10 pb-10">
+    <div className=" px-10 pb-10">
       <div className="flex gap-4 items-center mb-6 relative z-20" ref={dropdownRef}>
         <div className="relative">
           <button onClick={(e) => { e.stopPropagation(); setShowDropdown(!showDropdown); }} className="border px-4 py-2 rounded bg-white shadow text-sm flex items-center gap-1">
@@ -231,7 +231,7 @@ useEffect(() => {
               </div>
               <hr className="border-t border-gray-200 mt-6 mb-4" />
               <div className="flex justify-between items-center">
-                <button className="bg-pink-500 text-white px-6 py-2 rounded" onClick={applyFilters}>Apply</button>
+                <button className="bg-[#212121] text-white px-6 py-2 rounded" onClick={applyFilters}>Apply</button>
                 <button className="underline text-sm" onClick={clearFilters}>Clear</button>
               </div>
             </div>
@@ -266,27 +266,29 @@ useEffect(() => {
         {products.map((product, index) => {
           const isLast = index === products.length - 1;
           return (
-            <div onClick={() => navigate(`/accessories/${type}/${product.id}`)} key={product.id} ref={isLast ? lastProductRef : null} className="border rounded-2xl p-4 shadow-sm hover:shadow-lg transition duration-300">
+            <div onClick={() => navigate(`/accessories/${type}/${product.id}`)} key={product.id} ref={isLast ? lastProductRef : null} className="border  cursor-pointer  shadow-sm hover:shadow-lg transition duration-300">
               <motion.img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-64 object-cover rounded-xl mb-4"
+                className="w-full h-72 object-cover mb-4"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.6 }}
               />
-              <h3 className="font-semibold text-lg">{product.name}</h3>
-              <p className="text-sm text-gray-500 mt-1">${product.price.toFixed(2)}</p>
+            <div className='p-4'>
+                <h3 className="font-semibold text-lg">{product.name}</h3>
+             <p className="text-sm text-gray-500 mt-1">
+  <span className="font-semibold text-sm">Size: </span>{product.size}
+</p>
+              </div>
             </div>
           );
         })}
       </div>
 
       {loading && (
-        <div className="flex justify-center mt-6">
-          <div className="w-10 h-10 border-4 border-pink-400 border-dashed rounded-full animate-spin"></div>
-        </div>
+       <Loader/>
       )}
 
       {!hasMore && !loading && (

@@ -10,6 +10,7 @@ import VideoCarousel from '../components/VideoCarousel';
 import HomePageVideo from '../components/HomePageVideo';
 import Ethical from '../components/Ethical';
 import TwentyFour from '../components/TwentyFour';
+import StickyHorizontal from '../components/StickyHorizontal';
 const Home = () => {
   
   return (
@@ -17,6 +18,7 @@ const Home = () => {
    <HomePageVideo/>
     {/* <APCotureHighlight/> */}
     <ShopBySeason/>
+    
     <Trending/>
     {/* <section className="shop-season-section">
       <h2 className="shop-season-title">Shop by Season and Theme</h2>
