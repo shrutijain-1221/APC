@@ -28,8 +28,8 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 z-50 w-full h-[80px] px-20 md:px-32 transition-all duration-300 ${
-          isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'
+        className={`fixed top-0 left-0 z-50 w-full h-[90px] px-20 md:px-32 transition-all duration-300 ${
+         isScrolled ? 'bg-white shadow-sm' : 'bg-[rgba(255,255,255,0.1)] backdrop-blur-md' }
         }`}
       >
         <div className='flex items-center justify-between w-full h-full'>
@@ -39,14 +39,14 @@ const Navbar = () => {
             <img
               src={logo}
               alt="Logo"
-              className="h-16 cursor-pointer"
+              className="h-[76px] cursor-pointer"
               onClick={() => navigate("/")}
             />
           </div>
 
           {/* Desktop Nav */}
-          <ul className='hidden md:flex gap-8 font-medium items-center h-full'>
-            <li><NavLink to="/appreal" className={navLinkStyle}>Apprael</NavLink></li>
+          <ul className='hidden md:flex gap-8 text-xl font-semibold items-center h-full'>
+            <li><NavLink to="/" className={navLinkStyle}>Apparels</NavLink></li>
 
             {/* Accessories Dropdown */}
             <li
@@ -164,7 +164,7 @@ const Navbar = () => {
               {/* Mobile Links */}
               <div className='flex flex-col items-center gap-8 mt-10 font-medium'>
                 {[
-                  { to: "/appreal", label: "Apprael" },
+                  { to: "/", label: "Apparels" },
                   { to: "/accessories", label: "Accessories" },
                   { to: "/trending", label: "Trending" },
                   { to: "/aboutus", label: "About us" },

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import './Whoweare.css';
 
 const stats = [
-  { end: 6, label: "+", desc: "Years Exporting" },
+  { end: 7, label: "+", desc: "Years Exporting" },
   { end: 5000, label: "+", desc: "Satisfied Clients" },
   { end: 30, label: "+", desc: "Catering to Countries" },
   { end: 30, label: "+", desc: "Product Range" },

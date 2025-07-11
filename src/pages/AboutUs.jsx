@@ -5,19 +5,23 @@ import kamalImg from '../assets/founder1.jpg';
 import group from '../assets/team_photo.png'; 
 import sampleVideo from '../assets/5759073-uhd_3840_2160_30fps.mp4';
 import Slider from "react-slick";
-import sweepingImage from '../assets/sweeingImage.png'; 
+import about1 from '../assets/about1.jpg';
+import about2 from '../assets/about2.jpg';
+import about3 from '../assets/about.jpg';
+import about4 from '../assets/about4.jpg';
+import about5 from '../assets/about5.jpg';
+ // Replace with actual image path 
 import ExhibitionsGallery from '../components/ExhibitionGallery';
 import asso1 from '../assets/asso1.png';
 import asso2 from '../assets/asso2.png';
 import asso3 from '../assets/asso3.jpg';
 // Inside AboutUs component
 const teamImages = [
-  sweepingImage,
-  sweepingImage,  
-  sweepingImage,
-  sweepingImage,    
-  sweepingImage,
-  sweepingImage,
+ about1,
+ about2,
+ about3,
+  about4,
+  about5,
 ];
 const AboutUs = () => {
   return (
@@ -159,13 +163,14 @@ const AboutUs = () => {
         autoplay={true}
         autoplaySpeed={3000}
         arrows={false}
+        pauseOnHover={false}
       >
         {teamImages.map((src, index) => (
           <div key={index}>
             <img
               src={src}
               alt={`Story Image ${index + 1}`}
-              className="w-full h-[500px] object-cover shadow-lg"
+              className="w-full h-[500px] object-cover object-fit shadow-lg"
             />
           </div>
         ))}
@@ -212,17 +217,18 @@ const AboutUs = () => {
     autoplay={true}
     autoplaySpeed={3000}
     arrows={false}
+    pauseOnHover={false}
   >
     {teamImages.map((src, index) => (
       <div key={index}>
         <img
           src={src}
           alt={`Team ${index + 1}`}
-          className="w-full h-[500px] object-cover"
+          className="w-full h-[600px] object-cover"
         />
       </div>
     ))}
-  </Slider>
+  </Slider> 
   {/* <ExhibitionsGallery/> */}
 </div>
 <div className="mt-20 ">

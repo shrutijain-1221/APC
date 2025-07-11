@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import sampleVideo from '../assets/5759073-uhd_3840_2160_30fps.mp4';
+import sampleVideo from '../assets/HomePageVideo.mp4';
 import WhoWeAre from './WhoWeAre';
 
 const words = ['manufacturer', 'exporter'];
@@ -45,17 +45,17 @@ const TypingText = () => {
       <h1 className="md:text-7xl text-4xl font-bold leading-tight">
         All-in-1{' '}
         <br />
-        <span className="text-yellow-400">
+        <span className="text-[#a3d9b1]">
           {`${words[loopNum].substring(0, subIndex)}${blink ? '|' : ' '}`}
         </span>
         <br />
-        for your clothing<br />brand.
+        for your accessories<br />brand.
       </h1>
 
       <div className="mt-8 max-w-2xl text-lg md:text-2xl font-bold space-y-4">
         <p>Getting started with us is easy.</p>
         <p className="font-medium text-base md:text-lg">
-          Just share your clothing idea with us and we will take care of everything from sampling to delivering your accessories production.
+          Just share your accessories idea with us and we will take care of everything from sampling to delivering your accessories production.
         </p>
       </div>
     </div>
