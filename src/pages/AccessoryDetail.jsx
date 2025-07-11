@@ -247,7 +247,7 @@ useEffect(() => {
               {SORT_OPTIONS.map((option) => (
                 <div
                   key={option.value}
-                  className={`px-4 py-2 hover:bg-gray-100 cursor-pointer ${sortOption === option.value ? 'font-semibold text-pink-500' : ''}`}
+                  className={`px-4 py-2 hover:bg-gray-100 cursor-pointer ${sortOption === option.value ? 'font-semibold text-green-500' : ''}`}
                   onClick={() => {
                     setSortOption(option.value);
                     setShowSortDropdown(false);

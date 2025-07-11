@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import hair from '../assets/trending1.jpg';
-import jewelry from '../assets/trending2.jpg';
+import fashion from '../assets/Fashion_Accessories.jpeg'
+import totebag from  '../assets/Tote_Bags_Clutuches.jpeg'
 import headband from '../assets/trending3.jpg';
 
 const trendingBg = 'https://apc-assets-2025.s3.ap-northeast-1.amazonaws.com/apc_videos/trendingBg.mp4';
@@ -15,15 +15,15 @@ const trendingItems = [
   },
   {
     id: 2,
-    title: 'Fashion Jewelry',
+    title: 'Fashion Accessories',
     description: 'Statement jewelry for every season and occasion.',
-    image: jewelry,
+    image: fashion,
   },
   {
     id: 3,
-    title: 'Hair Accessories',
+    title: 'Clutches & Tote Bags',
     description: 'Elegant clips, bands, and decorative pieces.',
-    image: hair,
+    image: totebag,
   },
 ];
 
@@ -63,7 +63,7 @@ const TrendingSection = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-64 object-cover"
+                className="w-full h-64 object-cover "
               />
               <div className="p-5 text-black text-center h-full">
                 <h3 className="text-xl font-semibold">{item.title}</h3>

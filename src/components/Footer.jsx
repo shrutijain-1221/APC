@@ -24,10 +24,10 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <ul>
             <li><a href="/faqs">FAQs</a></li>
-            <li className="footer-factory-q">Can I visit your factory?</li>
-            <li><a href="/terms">Terms of Service</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/faqs#mode-of-payment">Mode of Payment</a></li>
+            <li><a href="/terms">Quality Control/Checks</a></li>
+            <li><a href="/privacy">Terms of Service</a></li>
+            <li><a href="/faqs#mode-of-payment">Privacy Policy</a></li>
+              <li><a href="/faqs#mode-of-payment">Mode of Payment</a></li>
           </ul>
         </div>
         <div className="footer-contact">

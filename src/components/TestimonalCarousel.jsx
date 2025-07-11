@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import founder1 from "../assets/founder1.png";
-const cards = [
-  { id: 1, title: " clicks don’t pay the bills—returns do. ROI ensures clarity..." },
-  { id: 2, title: " clicks don’t pay the bills—returns do. ROI ensures clarity..." },
-  { id: 3, title: " clicks don’t pay the bills—returns do. ROI ensures clarity..." },
-  { id: 4, title: " clicks don’t pay the bills—returns do. ROI ensures clarity..." },
-  { id: 5, title: " clicks don’t pay the bills—returns do. ROI ensures clarity..." },
-  { id: 6, title: " clicks don’t pay the bills—returns do. ROI ensures clarity..." },
-  { id: 7, title: " clicks don’t pay the bills—returns do. ROI ensures clarity..." },
-];
+
+import exh1 from "../assets/exh1.JPG";
+import exh2 from "../assets/exh2.png";
+import exh3 from "../assets/exh3.png";
+import exh4 from "../assets/exh4.png";
+import exh5 from "../assets/exh5.JPG";
+import exh6 from "../assets/exh6.jpg";
+import exh7 from "../assets/exh7.png";
+import exh8 from "../assets/exh8.png";
+import exh9 from "../assets/exh9.png";
+
+const cards = [exh1, exh2, exh3, exh4, exh5, exh6, exh7, exh8, exh9];
 
 const TestimonalCarousel = () => {
   const [index, setIndex] = useState(2);
@@ -17,10 +19,9 @@ const TestimonalCarousel = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Tailwind's `md` breakpoint
+      setIsMobile(window.innerWidth < 768);
     };
-
-    handleResize(); // Initial check
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -32,12 +33,9 @@ const TestimonalCarousel = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const visibleCards = [];
-  const range = isMobile ? [0] : [-2, -1, 0, 1, 2];
-
-  for (let i of range) {
-    visibleCards.push(cards[(index + i + cards.length) % cards.length]);
-  }
+  const getImageAt = (offset) => {
+    return cards[(index + offset + cards.length) % cards.length];
+  };
 
   const handlePrev = () => {
     setIndex((prev) => (prev - 1 + cards.length) % cards.length);
@@ -50,25 +48,27 @@ const TestimonalCarousel = () => {
   return (
     <div className="py-10 bg-[#f5f5f5]">
       <h2 className="text-5xl text-[#232323] text-center font-bold font-oswald mb-5">
-       Our Gallery
+        Our Gallery
       </h2>
 
       <div className="relative w-full flex items-center justify-center">
-        <div className=" relative w-[100%] h-[450px]  flex items-center justify-center overflow-hidden">
+        <div className="relative w-full h-[450px] flex items-center justify-center overflow-hidden">
+
           {/* Left Arrow */}
           <button
             onClick={handlePrev}
-            className=" absolute left-0 md:left-24 top-1/2 -translate-y-1/2 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-md z-50 hover:bg-gray-100"
+            className="absolute left-0 md:left-24 top-1/2 -translate-y-1/2 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-md z-50 hover:bg-gray-100"
           >
             {"<"}
           </button>
 
-          {/* Cards */}
-          {visibleCards.map((card, i) => {
-            const position = isMobile ? 0 : i - 2;
+          {/* Cards with fixed layout and only image transitions */}
+          {[ -2, -1, 0, 1, 2 ].map((offset, i) => {
+            const position = offset;
             const zIndex = 10 - Math.abs(position);
             const translateX = isMobile ? 0 : position * 80;
 
+            // Fixed sizes (same as before)
             const width = position === 0 ? "400px" : "300px";
             const height =
               position === 0
@@ -77,40 +77,37 @@ const TestimonalCarousel = () => {
                 ? "300px"
                 : "260px";
 
-           
-
-            const bgColor = position === 0
-              ? (isMobile ? "bg-green-100" : "bg-gray-100")
-              : "bg-green-100";
+            const imageSrc = getImageAt(offset);
 
             return (
-              <motion.div
-                key={card.id}
-                className={`absolute ${bgColor} transition-all duration-500 rounded-xl shadow-md p-4 flex items-center justify-center`}
+              <div
+                key={i}
+                className="absolute rounded-xl overflow-hidden shadow-md p-2 transition-all duration-500"
                 style={{
                   transform: `translateX(${translateX}%)`,
-                  zIndex: zIndex,
+                  zIndex,
                   width,
                   height,
+                  backgroundColor: "white", // fallback only
                 }}
               >
-                <motion.div
-                  key={card.id + "-" + index}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className={`h-full w-full flex items-center justify-center text-center px-4 `}
-                >
-                 <img src={founder1} alt="Founder" className="w-full h-full object-cover object-top" />
-                </motion.div>
-              </motion.div>
+                <motion.img
+                  key={imageSrc} // forces image transition
+                  src={imageSrc}
+                  alt={`Exhibition`}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6 }}
+                  className="w-full h-full object-cover object-center rounded-xl"
+                />
+              </div>
             );
           })}
 
           {/* Right Arrow */}
           <button
             onClick={handleNext}
-            className="absolute  right-0 md:right-24 top-1/2 -translate-y-1/2 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-md z-50 hover:bg-gray-100"
+            className="absolute right-0 md:right-24 top-1/2 -translate-y-1/2 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-md z-50 hover:bg-gray-100"
           >
             {">"}
           </button>
@@ -121,3 +118,4 @@ const TestimonalCarousel = () => {
 };
 
 export default TestimonalCarousel;
+
