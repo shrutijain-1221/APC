@@ -208,7 +208,7 @@ const AboutUs = () => {
     Our Team Moments
   </h3>
   
-  <Slider
+  {/* <Slider
     dots={true}
     infinite={true}
     speed={1000}
@@ -228,7 +228,7 @@ const AboutUs = () => {
         />
       </div>
     ))}
-  </Slider> 
+  </Slider>  */}
   {/* <ExhibitionsGallery/> */}
 </div>
 <div className="mt-20 ">

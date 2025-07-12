@@ -45,7 +45,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Nav */}
-          <ul className='hidden md:flex gap-8 text-xl font-semibold items-center h-full'>
+          <ul className='hidden md:flex gap-8 text-lg font-semibold items-center h-full'>
             <li><NavLink to="/" className={navLinkStyle}>Apparels</NavLink></li>
 
             {/* Accessories Dropdown */}
@@ -124,6 +124,7 @@ const Navbar = () => {
             <li><NavLink to="/blogs" className={navLinkStyle}>Blogs</NavLink></li>
              <li><NavLink to="/infrastructure" className={navLinkStyle}>Infrastructure</NavLink></li>
             <li><NavLink to="/testimonals" className={navLinkStyle}>Testimonals</NavLink></li>
+            <li><NavLink to="/faq" className={navLinkStyle}>FAQ</NavLink></li>
             <li>
               <NavLink to="/appointment" className="bg-[#212121] px-6 text-center py-2 rounded-md text-white">
                 Book an Appointment
@@ -171,6 +172,7 @@ const Navbar = () => {
                   { to: "/blogs", label: "Blogs" },
                   { to: "/testimonals", label: "Testimonals" },
                   { to: "/infrastructure", label: "Infrastructure" },
+                   { to: "/faq", label: "FAQ" },
                 ].map(({ to, label }) => (
                   <NavLink
                     key={to}

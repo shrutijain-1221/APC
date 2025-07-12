@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 const faqs = [
   {
     section: 'Company Overview',
@@ -142,22 +142,75 @@ const faqs = [
     ]
   },
 ];
+const Faq = () => {
+  const [openKey, setOpenKey] = useState(null); // Track the currently open question
 
-const Faq = () => (
-  <div style={{ maxWidth: 900, margin: '40px auto', padding: '0 16px', marginTop: 100 }}>
-    <h1 style={{ textAlign: 'center', marginBottom: 32 }}>Frequently Asked Questions</h1>
-    {faqs.map((section, idx) => (
-      <div key={idx} style={{ marginBottom: 40 }}>
-        <h2 style={{ color: '#25D366', borderBottom: '2px solid #eee', paddingBottom: 8 }}>{section.section}</h2>
-        {section.qas.map((faq, qidx) => (
-          <div key={qidx} style={{ marginBottom: 24, borderBottom: '1px solid #eee', paddingBottom: 16 }}>
-            <h3 style={{ color: '#222' }}>{faq.question}</h3>
-            <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
-          </div>
-        ))}
-      </div>
-    ))}
-  </div>
-);
+  const toggleAnswer = (key) => {
+    setOpenKey((prev) => (prev === key ? null : key)); // toggle open/close
+  };
 
-export default Faq; 
+  return (
+    <div className='mt-24 px-8 '>
+      <h1 className='flex font-oswald  font-medium justify-center text-2xl'>Frequently Asked Questions</h1>
+
+      {faqs.map((section, sectionIdx) => (
+        <div key={sectionIdx} style={{ marginBottom: 40 }}>
+          <p className='text-xl' style={{ color: '#25D366', borderBottom: '2px solid #eee', paddingBottom: 8 }}>
+            {section.section}
+          </p>
+
+          {section.qas.map((faq, qIdx) => {
+            const key = `${sectionIdx}-${qIdx}`;
+            const isOpen = openKey === key;
+
+            return (
+              <div
+                key={qIdx}
+                style={{
+                  marginBottom: 12,
+                  borderBottom: '1px solid #eee',
+                  paddingBottom: 8,
+                  cursor: 'pointer',
+                }}
+              >
+                <h3
+                  onClick={() => toggleAnswer(key)}
+                  style={{
+                    color: '#222',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    fontSize: 20,
+                  }}
+                >
+                  {faq.question}
+                  <span style={{ fontSize: 24 }}>{isOpen ? '−' : '+'}</span>
+                </h3>
+
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      key="content"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                      style={{ overflow: 'hidden' }}
+                    >
+                      <div
+                        style={{ marginTop: 8, color: '#555', fontSize: 18 }}
+                        dangerouslySetInnerHTML={{ __html: faq.answer }}
+                      />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            );
+          })}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Faq;

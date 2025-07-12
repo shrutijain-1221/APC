@@ -43,8 +43,12 @@ const Infrastructure = () => {
   <div className="grid grid-cols-1 md:grid-cols-3 gap-0 max-w-screen-xl mx-auto">
           {/* Column 1 */}
           <div className="flex flex-col gap-0">
-            <InfraBlock icon={cutting} title="1350+ Machines" items={[
-              "Single needle lockstitch machine UBT", "Double needle lockstitch machine", "Single needle + Double Needle chain stick", "Over lock 4th 5th 6th (Thread)", "Edge cutter machine", "Flat lock machine", "Kansai special machine", "Rib Cutter", "Double needle waist elastic attach machine", "Button machine", "Button hole machine", "Bartack machine", "Computer embroidery machine", "Snap button machine"
+            <InfraBlock icon={cutting} title="40+ Machines" items={[
+              "Single needle lockstitch machine UBT",
+"Double needle lockstitch machine",
+"Over lock 4th 5th 6th (Thread)",
+"Rib Cutter",
+"Computer embroidery machine"
             ]} />
             <InfraBlock icon={machines} title="Cutting Machines" items={[
               "Straight knife 8”", "Band knife", "Fusing Machine"
@@ -57,7 +61,9 @@ const Infrastructure = () => {
           {/* Column 2 */}
           <div className="flex flex-col gap-0">
             <InfraBlock icon={cadsystem} title="CAD System" items={[
-              "Plotter", "Cutting Plotter", "MF Plotter", "Digitizer Scanner"
+             "CAD Designer",
+"Fashion Designer",
+"Full set of product development team of 12 people"
             ]} />
             <InfraBlock icon={finestmaterial} title="Finest Material" items={[
               "Cotton", "Polyesters", "Rayon", "Blends"
@@ -73,10 +79,14 @@ const Infrastructure = () => {
               "Colour Matching Cabinet", "Tensile strength testing Matching Cabinet", "Tear strength test Matching Cabinet", "Button pull tester", "Yarn count tester", "Washing fastness tester", "Tumbler Matching Cabinet", "Hot air oven", "GSM cutter & washing Balance"
             ]} />
             <InfraBlock icon={wasing} title="Washing Facility" items={[
-              "Washing Machine", "Tumbler", "ferk", "Hydro Machine"
+             "Washing Machine",
+"Tumbler",
+"Washing fastness tester",
+"Hydro Machine"
             ]} />
             <InfraBlock icon={embroideryfacility} title="Embroidery Facility" items={[
-              "4 head 9 color machine (for sampling alone)"
+             "300+ inhouse embroider for hand embroidery",
+"Computer thread embroidery machine"
             ]} isParagraph />
           </div>
         </div>
