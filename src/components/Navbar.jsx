@@ -22,14 +22,14 @@ const Navbar = () => {
 
   const navLinkStyle = ({ isActive }) =>
     `pb-1 border-b-2 transition-all duration-200 ${
-      isActive ? 'text-[#a3d9b1] border-[#a3d9b1]' : 'border-transparent text-black'
+      isActive ? 'text-[#cbdac5] border-[#a3d9b1]' : 'border-transparent text-white'
     }`;
 
   return (
     <>
       <div
-        className={`fixed top-0 left-0 z-50 w-full h-[90px] px-20 md:px-32 transition-all duration-300 ${
-         isScrolled ? 'bg-white shadow-sm' : 'bg-[rgba(255,255,255,0.1)] backdrop-blur-md' }
+        className={`fixed top-0 left-0 z-50 w-full h-[90px] px-20 md:px-32 transition-all duration-300 bg-[#18181b] ${
+         isScrolled ? 'shadow-sm' : '' }
         }`}
       >
         <div className='flex items-center justify-between w-full h-full'>
@@ -45,7 +45,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Nav */}
-          <ul className='hidden md:flex gap-8 text-lg font-semibold items-center h-full'>
+          <ul className='hidden md:flex gap-8 text-lg font-poppins font-normal items-center h-full uppercase'>
             <li><NavLink to="/" className={navLinkStyle}>Apparels</NavLink></li>
 
             {/* Accessories Dropdown */}
@@ -63,7 +63,7 @@ const Navbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute font-['Poppins'] top-8 -left-72 -translate-x-1/2 mt-2 bg-white shadow-lg border rounded-md z-50 w-[800px] p-8 flex gap-6 text-lg"
+                    className="absolute font-poppins top-8 -left-72 -translate-x-1/2 mt-2 bg-white shadow-lg border rounded-md z-50 w-[800px] p-8 flex gap-6 text-lg"
                   >
                     {/* Hair Accessories */}
                     <div>
@@ -124,9 +124,8 @@ const Navbar = () => {
             <li><NavLink to="/blogs" className={navLinkStyle}>Blogs</NavLink></li>
              <li><NavLink to="/infrastructure" className={navLinkStyle}>Infrastructure</NavLink></li>
             <li><NavLink to="/testimonals" className={navLinkStyle}>Testimonals</NavLink></li>
-            <li><NavLink to="/faq" className={navLinkStyle}>FAQ</NavLink></li>
             <li>
-              <NavLink to="/appointment" className="bg-[#212121] px-6 text-center py-2 rounded-md text-white">
+              <NavLink to="/contact" className="bg-[#a3d9b1] px-6 text-center py-2 rounded-md text-black">
                 Book an Appointment
               </NavLink>
             </li>

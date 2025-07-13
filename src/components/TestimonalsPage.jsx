@@ -31,7 +31,8 @@ const TestimonalsPage = () => {
 
   return (
     <div className="bg-gray-50 px-2 mt-24 overflow-x-hidden">
-      <h2 className="text-4xl font-oswald  font-medium text-center mb-12 ">What Our Clients Say</h2>
+      <h2 className="text-5xl text-black text-center mb-5 uppercase tracking-wider" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 200 }}>What Our Clients Say</h2>
+      <div className="h-px w-[1000px] bg-black mx-auto" />
       {testimonials.map((t, index) => (
         <TestimonialCards
           key={index}

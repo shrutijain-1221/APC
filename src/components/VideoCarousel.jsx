@@ -3,7 +3,7 @@ import Marquee from 'react-fast-marquee';
 
 const seasons = [
   { name: "Valentine's Day", video: 'https://apc-assets-2025.s3.ap-northeast-1.amazonaws.com/apc_videos/valentine.mp4' },
-  { name: "Crawfish Boil", video: 'https://apc-assets-2025.s3.ap-northeast-1.amazonaws.com/apc_videos/crawfish.mp4' },
+  { name: "Summer", video: 'https://apc-assets-2025.s3.ap-northeast-1.amazonaws.com/apc_videos/summer.mp4' },
   { name: "Mardi Gras", video: 'https://apc-assets-2025.s3.ap-northeast-1.amazonaws.com/apc_videos/mardi.mp4' },
   { name: "Easter", video: 'https://apc-assets-2025.s3.ap-northeast-1.amazonaws.com/apc_videos/easter.mp4' },
   { name: "4th July", video: 'https://apc-assets-2025.s3.ap-northeast-1.amazonaws.com/apc_videos/4th.mp4' },
@@ -16,7 +16,7 @@ const seasons = [
 const VideoCarousel = () => {
   return (
     <div className="w-full flex items-center justify-center h-[500px] py-6">
-      <Marquee direction="right" gradient={false} speed={30} pauseOnHover={true}>
+      <Marquee direction="right" gradient={false} speed={45} pauseOnHover={false} drag="free">
         {seasons.map((item, index) => (
           <div key={index} className="mx-4 min-w-[200px] text-center">
             <video

@@ -17,6 +17,7 @@ import ChatbotFloat from './components/ChatbotFloat'
 import Infrastructure from './pages/Infrastructure'
 import AccessoryProductDetailPage from './pages/AccessoryProductDetailPage'
 import Faq from './pages/Faq'
+import ContactUs from './pages/ContactUs'
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
   </Route>
   <Route path='/accessories/:type/:productId' element={<AccessoryProductDetailPage/>}/>
   <Route path='/faq' element={<Faq/>}/>
+  <Route path='/contact' element={<ContactUs/>}/>
      </Routes>
      <Footer/>
      <ChatbotFloat />

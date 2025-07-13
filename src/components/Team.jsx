@@ -53,24 +53,26 @@ const Team = () => {
       {/* Content */}
       <div className="relative z-20 w-full flex flex-col items-center justify-center">
         {/* Heading and Images */}
-        <div className="flex flex-col w-full items-center justify-center relative">
-          {/* Left: Heading and Images */}
-          <div className="w-full flex flex-col items-center justify-center">
-            <div className="flex flex-col items-center justify-center mb-8 w-full">
-              <h2 className="text-5xl font-extrabold mb-12 text-center">
-                Meet Our <span className="text-[#FACC14]">Founders</span>
+        <div className="flex flex-col md:flex-row w-full items-center justify-between gap-8">
+          {/* Left: Text Content */}
+          <div className="w-full md:w-1/2 flex flex-col items-start justify-center">
+            <div className="flex flex-col items-start justify-center mb-8 w-full">
+              <h2 className="text-5xl font-extrabold mb-12 text-left">
+                Meet Our <span className="text-[#a3d9b1]">Founders</span>
               </h2>
-              <p className="text-lg text-center max-w-2xl mb-12">
+              <p className="text-lg text-left max-w-2xl mb-12">
               Akansha and Kamal Piplani launched AP Curated Couture in 2018 with a shared vision to blend fashion, purpose, and empowerment. Together, they've grown the brand into a globally recognized name rooted in handcrafted excellence and social impact.
               </p>
             </div>
-            <div className="flex flex-col md:flex-row gap-8 w-full items-center justify-center text-center">
-              {team.slice(0, 2).map((member, idx) => (
-                <div key={idx} className="flex justify-center">
-                  <Card member={member} />
-                </div>
-              ))}
-            </div>
+          </div>
+
+          {/* Right: Photos */}
+          <div className="w-full md:w-1/2 flex flex-col md:flex-row gap-8 items-center justify-center">
+            {team.slice(0, 2).map((member, idx) => (
+              <div key={idx} className="flex justify-center">
+                <Card member={member} />
+              </div>
+            ))}
           </div>
         </div>
       </div>

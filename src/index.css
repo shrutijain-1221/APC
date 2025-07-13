@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/times-new-roman');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;200&display=swap');
 @import url('/node_modules/slick-carousel/slick/slick.css');
 @import url('/node_modules/slick-carousel/slick/slick-theme.css');
 @tailwind base;
