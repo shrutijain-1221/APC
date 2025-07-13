@@ -69,7 +69,7 @@ const HowToPlace = () => {
 
   return (
     <section className="py-16 bg-white mb-10">
-       <h2 className="text-5xl text-black text-center mb-5 uppercase tracking-wider" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 200 }}>
+      <h2 className="text-3xl text-black text-center mb-5 uppercase tracking-wider" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 200 }}>
         How to Place an Order?
       </h2>
       <div className="h-px w-[1000px] bg-black mx-auto" />

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import infra from '../assets/infra.png'
 
+import ContactUs from "../pages/ContactUs";
+
 const TypingHeadingLoop = ({ phrases }) => {
   const [loopNum, setLoopNum] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
@@ -69,7 +71,7 @@ const TwentyFour = () => {
         <img src={infra} alt="" className="w-[400px] h-[300px] bg-black" />
         <h2 className="text-7xl font-extrabold text-black">24X7</h2>
         <hr className="border-gray-400 w-full" />
-        <button className="bg-black text-white font-bold py-3 px-6 rounded-md hover:bg-gray-800 transition">
+        <button onClick={ContactUs} className="bg-black text-white font-bold py-3 px-6 rounded-md hover:bg-gray-800 transition">
           Contact AP Coture
         </button>
       </div>

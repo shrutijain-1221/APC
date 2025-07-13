@@ -22,13 +22,13 @@ const Navbar = () => {
 
   const navLinkStyle = ({ isActive }) =>
     `pb-1 border-b-2 transition-all duration-200 ${
-      isActive ? 'text-[#cbdac5] border-[#a3d9b1]' : 'border-transparent text-white'
+      isActive ? 'text-black border-[#a3d9b1]' : 'border-transparent text-black'
     }`;
 
   return (
     <>
       <div
-        className={`fixed top-0 left-0 z-50 w-full h-[90px] px-20 md:px-32 transition-all duration-300 bg-[#18181b] ${
+        className={`fixed top-0 left-0 z-50 w-full h-[90px] px-20 md:px-32 transition-all duration-300 bg-[#cbdac5] ${
          isScrolled ? 'shadow-sm' : '' }
         }`}
       >
@@ -45,7 +45,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Nav */}
-          <ul className='hidden md:flex gap-8 text-lg font-poppins font-normal items-center h-full uppercase'>
+          <ul className='hidden md:flex gap-8 text-lg font-poppins font-normal items-center h-full'>
             <li><NavLink to="/" className={navLinkStyle}>Apparels</NavLink></li>
 
             {/* Accessories Dropdown */}
@@ -125,7 +125,7 @@ const Navbar = () => {
              <li><NavLink to="/infrastructure" className={navLinkStyle}>Infrastructure</NavLink></li>
             <li><NavLink to="/testimonals" className={navLinkStyle}>Testimonals</NavLink></li>
             <li>
-              <NavLink to="/contact" className="bg-[#a3d9b1] px-6 text-center py-2 rounded-md text-black">
+              <NavLink to="/contact" className="bg-black px-6 text-center py-2 rounded-md text-white">
                 Book an Appointment
               </NavLink>
             </li>
