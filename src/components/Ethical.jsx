@@ -55,7 +55,7 @@ const Ethical = () => {
         </div>
         <h1 className="w-full flex flex-col justify-center md:justify-start text-4xl md:text-5xl font-bold text-[#635d6e]">
           An ethical <br />
-          <span className="text-white mt-2">overseas clothing manufacturer.</span>
+          <span className="text-white mt-2">overseas accessories manufacturer.</span>
         </h1>
         <p className="text-gray-300 text-lg md:text-xl mt-4">
           We as custom-made and sustainable clothing manufacturers make sure
@@ -83,11 +83,9 @@ const Ethical = () => {
           <img src={ethical} alt="Ethical Icon" className="w-56 h-24" />
         </div>
         <hr className="border-gray-600 w-full" />
-        <TypingTextCard words={["No Child Labour!", "Flexible Timings"]} />
+        <TypingTextCard words={["ETHICAL MANUFACTURING & SOURCING",]} />
         <p className="text-gray-300 text-base text-center md:text-left">
-          These are a few core objectives that we focus on in order to uplift
-          society and especially women. This small contribution from our side{" "}
-          <strong>makes us feel proud</strong> of what we do.
+        Its your responsibility too! Source from an Ethical Clothing Manufacturer.
         </p>
       </div>
     </div>

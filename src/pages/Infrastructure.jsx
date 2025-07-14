@@ -15,7 +15,7 @@ import PhotoGallery from '../components/PhotoGallery';
 
 const Infrastructure = () => {
   return (
-    <div className='overflow-x-hidden'>
+    <div className='overflow-x-hidden mt-[90px]'>
       {/* Header Section */}
       <div className="mb-16 relative">
         <motion.img
@@ -99,7 +99,7 @@ const Infrastructure = () => {
     required for information trade designs amid the testing stages.
   </p>
   <p className="text-base md:text-lg leading-relaxed mt-4">
-    The working environment is ergonomically composed with appropriate lighting, space and solace.
+    The working environment is ergonomically composed with cbdac5opriate lighting, space and solace.
   </p>
 </div>
     </div>

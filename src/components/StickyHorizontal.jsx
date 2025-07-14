@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 
-import customInquiryIcon from '../assets/srep1.png';
-import chatIcon from '../assets/srep2.png';
-import exploreIcon from '../assets/srep3.png';
-import orderIcon from '../assets/srep4.png';
-import depositIcon from '../assets/srep5.png';
-import sampleIcon from '../assets/srep6.png';
-import productionIcon from '../assets/srep7.png';
-import paymentIcon from '../assets/srep8.png';
-import shippingIcon from '../assets/srep9.png';
+import customInquiryIcon from '../assets/steps/1.png';
+import chatIcon from '../assets/steps/2.png';
+import exploreIcon from '../assets/steps/3.png';
+import orderIcon from '../assets/steps/4.png';
+import depositIcon from '../assets/steps/5.png';
+import sampleIcon from '../assets/steps/6.png';
+import productionIcon from '../assets/steps/7.png';
+import paymentIcon from '../assets/steps/8.png';
+import shippingIcon from '../assets/steps/9.png';
 
 const steps = [
   { label: 'Custom Design Inquiry', icon: customInquiryIcon },
@@ -55,7 +55,7 @@ const HorizontalScrollSection = () => {
       className="relative overflow-y-scroll scroll-hide"
       style={{ height: '300px' }}
     >
-      <div className="sticky top-0 h-full bg-white flex items-center">
+      <div className="sticky top-0 h-full flex items-center">
         <div
           ref={scrollerRef}
           className="flex transition-transform duration-0 ease-linear will-change-transform"
@@ -64,12 +64,12 @@ const HorizontalScrollSection = () => {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="min-w-[300px] h-[250px] mx-6 bg-[#f3f4f6] rounded-xl shadow-md flex flex-col items-center justify-center text-center p-6"
+              className="min-w-[300px] h-[250px] mx-6 rounded-xl flex flex-col items-center justify-center text-center p-6"
             >
               <img
                 src={step.icon}
                 alt={step.label}
-                className="w-40 h-40 mb-4 object-contain"
+                className="w-170 h-170 mb-4 object-contain"
               />
               <p className="text-lg font-semibold text-gray-800">{step.label}</p>
             </div>

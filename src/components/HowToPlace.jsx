@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import StickyHorizontal from "./StickyHorizontal";
-import customInquiryIcon from '../assets/srep1.png';
+import customInquiryIcon from '../assets/steps/1.png';
 import chatIcon from '../assets/srep2.png';
 import exploreIcon from '../assets/srep3.png';
 import orderIcon from '../assets/srep4.png';
@@ -69,10 +69,10 @@ const HowToPlace = () => {
 
   return (
     <section className="py-16 bg-white mb-10">
-      <h2 className="text-5xl text-center text-[#232323] font-oslwald mb-10 font-bold">
+      <h2 className="text-3xl text-black text-center mb-5 uppercase tracking-wider" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 200 }}>
         How to Place an Order?
       </h2>
-             <p className="text-center text-black text-xl mb-10 text-[#666]">Your custom creation starts here – just follow the journey</p>
+      <div className="h-px w-[1000px] bg-black mx-auto" />
 <StickyHorizontal/>
     </section>
   );

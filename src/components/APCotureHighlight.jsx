@@ -93,7 +93,7 @@ const mobileVideoRef = useRef(null);
       return (
         <motion.p
           key={lineIndex}
-          className="text-xl font-semibold text-[#232323] uppercase font-[poppins] leading-snug mb-2"
+          className="text-l font-semibold text-[#232323] uppercase font-[poppins] leading-snug mb-2"
         >
           {words.map((word, wordIndex) => (
             <motion.span

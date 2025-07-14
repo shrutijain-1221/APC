@@ -77,13 +77,11 @@ const ShopBySeason = () => {
   };
 
   return (
-    <div className="py-10 bg-white bg-[#E8E6E6]">
-      <h2 className="text-5xl text-balck text-center font-bold font-oswald mb-5">
+    <div className="py-10 bg-white bg-white">
+     <h2 className="text-3xl text-black text-center mb-5 uppercase tracking-wider" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 200 }}>
         Shop By Season & Theme
       </h2>
-      <p className="text-center text-xl mb-10 text-black">
-        One stop for all your fashion accessory needs, no matter the season or occasion.
-      </p>
+      <div className="h-px w-[1000px] bg-black mx-auto" />
 <VideoCarousel/>
     
     </div>

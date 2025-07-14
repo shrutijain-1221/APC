@@ -46,10 +46,11 @@ const TestimonalCarousel = () => {
   };
 
   return (
-    <div className="py-10 bg-[#f5f5f5]">
-      <h2 className="text-5xl text-[#232323] text-center font-bold font-oswald mb-5">
+    <div className="py-10 bg-white">
+     <h2 className="text-3xl text-black text-center mb-5 uppercase tracking-wider" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 200 }}>
         Our Gallery
       </h2>
+      <div className="h-px w-[1000px] bg-black mx-auto" />
 
       <div className="relative w-full flex items-center justify-center">
         <div className="relative w-full h-[450px] flex items-center justify-center overflow-hidden">

@@ -39,7 +39,7 @@ const Sidebar = () => {
 
   return (
     <div className="w-1/6 p-6 border-r border-gray-300">
-      <h2 className="text-4xl font-oswald  font-medium mb-2 text-[#666]">Browse by</h2>
+      <h2 className="text-4xl font-poppins font-medium mb-2 text-[#666]">Browse by</h2>
       <hr className="mb-2" />
 
       <div className="mb-6">

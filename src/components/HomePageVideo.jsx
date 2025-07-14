@@ -71,14 +71,14 @@ const HomePageVideo = () => {
           autoPlay
           loop
           muted
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-[90px] left-0 w-full h-full object-cover"
         >
           <source src={sampleVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         {/* Overlay for Desktop */}
-        <div className="absolute inset-0 bg-black bg-opacity-40 text-left w-full h-full hidden md:flex flex-row items-center justify-between px-6">
+        <div className="absolute inset-0 bg-black bg-opacity-40 text-left w-full h-full hidden md:flex flex-row items-center justify-between px-6" style={{ top: '90px' }}>
           <div>
             <TypingText />
           </div>
@@ -88,7 +88,7 @@ const HomePageVideo = () => {
         </div>
 
         {/* Overlay for Mobile */}
-        <div className="md:hidden absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center px-4 text-center">
+        <div className="md:hidden absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center px-4 text-center" style={{ top: '90px' }}>
           <TypingText />
         </div>
       </div>

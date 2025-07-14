@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import infra from '../assets/infra.png'
+
+import ContactUs from "../pages/ContactUs";
 
 const TypingHeadingLoop = ({ phrases }) => {
   const [loopNum, setLoopNum] = useState(0);
@@ -50,29 +53,25 @@ const TypingHeadingLoop = ({ phrases }) => {
 
 const TwentyFour = () => {
   return (
-    <div className="bg-[#fdf5f5] py-12 px-6 md:px-16 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-12 text-center md:text-left">
+    <div className="bg-[#cbdac5] py-12 px-6 md:px-16 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-12 text-center md:text-left">
       {/* Left content */}
       <div className="flex-1 space-y-6 max-w-2xl flex flex-col items-center md:items-start">
         <div className="border border-gray-700 inline-block py-1 px-4 rounded-full text-sm font-medium text-gray-800">
-          ✅ Trusted overseas clothing manufacturer
+          ✅ Trusted overseas accessories manufacturer
         </div>
-        <TypingHeadingLoop phrases={["Turning your clothing\nidea into reality."]} />
+        <TypingHeadingLoop phrases={["Turning your accessories\nidea into reality."]} />
         <p className="text-gray-700 text-lg max-w-md">
-          Just fill the contact form with your details along with your clothing
+          Just fill the contact form with your details along with your accessories
           requirements and we’ll get back to you <strong>within 24hrs.</strong>
         </p>
       </div>
 
       {/* Right content */}
       <div className="flex-1 flex flex-col items-center md:items-start gap-6 max-w-lg">
-        <h2 className="text-5xl font-extrabold text-black">24X7</h2>
+        <img src={infra} alt="" className="w-[400px] h-[300px] bg-black" />
+        <h2 className="text-7xl font-extrabold text-black">24X7</h2>
         <hr className="border-gray-400 w-full" />
-        <ul className="space-y-2 text-gray-800 text-lg text-left">
-          <li>✅ Indian clothing manufacturer</li>
-          <li>✅ Custom make-to-order</li>
-          <li>✅ Prototype, bulk & logistics</li>
-        </ul>
-        <button className="bg-black text-white font-bold py-3 px-6 rounded-md hover:bg-gray-800 transition">
+        <button onClick={ContactUs} className="bg-black text-white font-bold py-3 px-6 rounded-md hover:bg-gray-800 transition">
           Contact AP Coture
         </button>
       </div>
